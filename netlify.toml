@@ -1,2 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
 [dev]
-  targetPort = 8000
+  autoLaunch = false

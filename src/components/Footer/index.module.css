@@ -1,0 +1,35 @@
+.footer {
+  position: relative;
+  margin: 0;
+  padding-block: 2%;
+  padding-inline: 0;
+  padding-block-start: 3%;
+  padding-block-end: 1%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 0;
+}
+.flex.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-block-end: 2rem;
+}
+
+.flex > h3,
+.flex > p {
+  text-align: center;
+}
+.flex p {
+  font-size: 13px;
+  color: black;
+}
+
+.flex.flexWrap > a {
+  margin-block-end: 10px;
+}
+
+@media (min-width: 860px) { }

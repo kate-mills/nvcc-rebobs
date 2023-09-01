@@ -21,7 +21,7 @@ const AboutView = () => {
   return (
     <Main>
       <Box
-        bgcolor={'#f8ca11'}
+        bgcolor={'#fff'}
         sx={{
           position: 'relative',
           '&::after': {

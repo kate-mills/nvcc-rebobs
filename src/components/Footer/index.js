@@ -1,6 +1,9 @@
 import * as React from 'react'
 import * as styles from './index.module.css'
 
+import { useTheme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+
 import Block from '../Block'
 
 import theHub from './images/the-hub.svg'
@@ -8,11 +11,14 @@ import theHub from './images/the-hub.svg'
 import imageData from './imageData'
 
 const Footer = ({ children }) => {
+  const {
+    palette: { primary },
+  } = useTheme()
   return (
-    <Block bgColor={'var(--yellow)'}>
+    <Block bgColor={primary.main}>
       <footer className={styles.footer}>
         <div className={`${styles.flex}`}>
-          <h3>PROUDLY SUPPORTED BY</h3>
+          <Typography variant="h4">PROUDLY SUPPORTED BY</Typography>
         </div>
         <div className={`${styles.flex}`}>
           <a rel="noreferrer" href="http://www.thehubnapa.com" target="_blank">
@@ -23,8 +29,7 @@ const Footer = ({ children }) => {
           {imageData.map(({ name, url, width, href }) => {
             return (
               <a key={name} href={href} target="_blank" rel="noreferrer">
-                <img src={url} alt={`${name} logo`} width={width}
-              />
+                <img src={url} alt={`${name} logo`} width={width} />
               </a>
             )
           })}

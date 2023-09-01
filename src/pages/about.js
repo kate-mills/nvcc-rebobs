@@ -1,14 +1,14 @@
 import React from 'react'
-import IndexView from 'views/IndexView'
+import AboutView from 'views/AboutView'
 
 //import Seo from 'components/Seo'
 //import SeoImg from 'images/website.jpg'
 
-const IndexPage = () => {
-  return <IndexView />
+const AboutPage = () => {
+  return <AboutView />
 }
 
-export default IndexPage
+export default AboutPage
 
 /*export const Head = ({location}) => {
   return (

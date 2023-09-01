@@ -1,9 +1,11 @@
 /*
 const rebobs_colors = {
-  red: ' #e60202',
-  orange: '#f26602',
-  yellow: '#f2cc11',
+  red: '#e60202',
+  orange: '#f26122',
+  yellow: '#f9cb11',
   purple: '#551a8b',
+  black: '#050501',
+  white: '#fffefe',
 }*/
 
 export const light = {
@@ -14,16 +16,16 @@ export const light = {
   cardShadow: 'rgba(23, 70, 161, .11)',
   mode: 'light',
   primary: {
-    main: '#f2cc11',
-    contrastText: '#000'
+    main: '#a91e2d',
+    contrastText: '#fff'
   },
   secondary: {
-    main: '#551a8b',
+    main: '#f26122',
     contrastText: '#fff'
   },
   text: {
-    primary: '#1e2022',
-    secondary: '#677788'
+    primary: '#050501',
+    secondary: '#504b4c'
   },
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {

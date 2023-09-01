@@ -9,11 +9,7 @@ const getTheme = (mode, themeToggler) =>
       palette: mode === 'light' ? light : dark,
       shadows: shadows(mode),
       typography: {
-        fontFamily: "'Inter', sans-serif",
-        cursive: {
-          fontFamily: "'Shadows Into Light Two', sans-serif",
-          fontWeight: 400,
-        },
+        fontFamily: "'Inter Variable', sans-serif",
         button: {
           textTransform: 'none',
           fontWeight: 'medium',

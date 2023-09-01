@@ -36,15 +36,7 @@ const Footer = () => {
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component={GatsbyLink}
-                to="/"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Home
-              </Link>
+              <Link underline="none" component={GatsbyLink} to="/" color="text.primary" variant={'subtitle2'} > Home</Link>
             </Box>
             <Box marginTop={1} marginRight={2}>
               <Link

@@ -15,7 +15,7 @@ export default IndexPage
     <Seo
       location={location}
       pageContext={{
-        title: 'Kate Mills Portfolio Projects',
+        title: '',
         description: '',
         image: SeoImg
       }}

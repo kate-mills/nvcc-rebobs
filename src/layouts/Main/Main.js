@@ -37,9 +37,6 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
 
   return (
     <Box>
-      <Box bgcolor={bgcolor} position={'relative'} zIndex={theme.zIndex.appBar}>
-        <Container paddingTop={'8px !important'} paddingBottom={'0 !important'}><Box height={3}></Box> </Container>
-      </Box>
       <AppBar
         position={'sticky'}
         sx={{
@@ -48,7 +45,7 @@ const Main = ({ children, colorInvert = false, bgcolor = 'transparent' }) => {
         }}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={1}>
+        <Container paddingY={'2px'}>
           <Topbar
             onSidebarOpen={handleSidebarOpen}
             colorInvert={trigger ? false : colorInvert}

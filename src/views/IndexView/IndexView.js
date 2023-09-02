@@ -10,11 +10,12 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 
 
-/*import {Hero} from './components'*/
+import {Hero} from './components'
 
 const IndexView = () => {
   return (
     <Main>
+    <Hero/>
       <Box
         sx={{ overflow: 'hidden !important' }}
         minHeight={'calc(100vh - 247px)'}

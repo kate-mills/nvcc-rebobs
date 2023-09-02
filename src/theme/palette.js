@@ -1,7 +1,7 @@
 /*
 const rebobs_colors = {
   red: '#e60202',
-  orange: '#f26122',
+  orange: '#d3551f',
   yellow: '#f9cb11',
   purple: '#551a8b',
   black: '#050501',
@@ -16,11 +16,11 @@ export const light = {
   cardShadow: 'rgba(23, 70, 161, .11)',
   mode: 'light',
   primary: {
-    main: '#f26122',
+    main: '#d3551f',
     contrastText: '#fff',
   },
   secondary: {
-    main: '#f26122',
+    main: '#050501',
     contrastText: '#fff',
   },
   yellow: {

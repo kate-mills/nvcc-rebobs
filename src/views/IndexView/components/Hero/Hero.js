@@ -36,7 +36,8 @@ const validationSchema = yup.object({
     .string()
     .oneOf(activityOptions, 'Invalid Selection')
     .required('Please choose your interest'),
-  more: yup.string(),
+  more:
+  yup.string().trim(),
 })
 
 const Hero = () => {
@@ -51,9 +52,7 @@ const Hero = () => {
           fontWeight: 900,
           color: 'common.white',
         }}
-      >
-        {' '}
-        Mountain Bike Racing And Riding For All!!
+    > Mountain Bike Racing And Riding For All!!
       </Typography>
       <Typography
         variant="h6"
@@ -94,7 +93,7 @@ const Hero = () => {
 
     return (
       <Box padding={{ xs: 3, sm: 6 }} width={1} component={Card} boxShadow={1}>
-        <form noValidate autoComplete="off" onSubmit={formik.handleSubmit} name={'contact-form'} data-netlify={'true'} method="POST">
+        <form autoComplete="off" onSubmit={formik.handleSubmit} name={'contact-form'} data-netlify={'true'} method="POST">
           <input type="hidden" name="form-name" value="contact-form" />
           <Box display="flex" flexDirection={'column'}>
             <Box marginBottom={4}>
@@ -168,6 +167,7 @@ const Hero = () => {
                 sx={{ mb: 4 }}
                 color="secondary"
                 id="more"
+                name="more"
                 label="Tell Us More"
                 multiline
                 fullWidth
@@ -175,6 +175,7 @@ const Hero = () => {
                 maxRows={4}
                 value={formik.values.more}
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
               <Box />
               <Button

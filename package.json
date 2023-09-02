@@ -21,6 +21,7 @@
     "@mui/icons-material": "^5.14.7",
     "@mui/material": "^5.14.7",
     "aos": "^2.3.4",
+    "formik": "^2.4.3",
     "gatsby": "^5.12.1",
     "gatsby-plugin-manifest": "^5.12.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
@@ -28,7 +29,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "yup": "^1.2.0"
   },
   "repository": {
     "type": "git",

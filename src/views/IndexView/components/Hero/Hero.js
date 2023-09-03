@@ -11,9 +11,9 @@ import Button from '@mui/material/Button'
 import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
+import bgImg from 'images/mountain-bike-team.webp'
 
-import {handleSubmitContactForm} from 'utils/form-helper'
-
+import { handleSubmitContactForm } from 'utils/form-helper'
 
 import Container from 'components/Container'
 import 'global-styles/overrides.css'
@@ -36,8 +36,7 @@ const validationSchema = yup.object({
     .string()
     .oneOf(activityOptions, 'Invalid Selection')
     .required('Please choose your interest'),
-  more:
-  yup.string().trim(),
+  more: yup.string().trim(),
 })
 
 const Hero = () => {
@@ -52,7 +51,9 @@ const Hero = () => {
           fontWeight: 900,
           color: 'common.white',
         }}
-    > Mountain Bike Racing And Riding For All!!
+      >
+        {' '}
+        Mountain Bike Racing And Riding For All!!
       </Typography>
       <Typography
         variant="h6"
@@ -79,21 +80,27 @@ const Hero = () => {
       email: '',
       activity: '',
       interest: '',
-      more: ''
+      more: '',
     }
-
 
     const formik = useFormik({
       initialValues,
       validationSchema: validationSchema,
-      onSubmit: handleSubmitContactForm
+      onSubmit: handleSubmitContactForm,
     })
 
-    const isDisabled = !formik.values.fullName || !formik.values.email || !formik.values.interest
+    const isDisabled =
+      !formik.values.fullName || !formik.values.email || !formik.values.interest
 
     return (
       <Box padding={{ xs: 3, sm: 6 }} width={1} component={Card} boxShadow={1}>
-        <form autoComplete="off" onSubmit={formik.handleSubmit} name={'contact-form'} data-netlify={'true'} method="POST">
+        <form
+          autoComplete="off"
+          onSubmit={formik.handleSubmit}
+          name={'contact-form'}
+          data-netlify={'true'}
+          method="POST"
+        >
           <input type="hidden" name="form-name" value="contact-form" />
           <Box display="flex" flexDirection={'column'}>
             <Box marginBottom={4}>
@@ -117,7 +124,7 @@ const Hero = () => {
             </Box>
             <Box marginBottom={4}>
               <TextField
-                sx={{ height: 54}}
+                sx={{ height: 54 }}
                 id="email"
                 label="Email"
                 type="email"
@@ -212,11 +219,11 @@ const Hero = () => {
       height={'auto'}
       position={'relative'}
       sx={{
-        marginTop: -5,
+        marginTop: -13,
         paddingTop: 13,
         backgroundColor: theme.palette.alternate.main,
         background:
-          'url(https://assets.maccarianagency.com/backgrounds/img19.jpg) no-repeat center',
+          `url(${bgImg}) no-repeat center`,
         backgroundSize: 'cover',
       }}
     >

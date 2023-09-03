@@ -7,5 +7,5 @@ input:-webkit-autofill:active{
 }
 
 button#submit-contact-form:disabled{
-  background-color: #d3551f !important;
+  /*background-color: #d3551f !important;*/
 }

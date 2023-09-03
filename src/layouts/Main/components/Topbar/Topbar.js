@@ -18,19 +18,18 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       justifyContent={'space-between'}
       alignItems={'center'}
       width={1}
+      height={1}
     >
-      <Box display={'flex'} component={GatsbyLink} to="/" title="Napa Valley Composite Cycling Team" width={{xs: 100, md: 115}}>
-        <Box component={'img'} src={Logo} alt="Rebobs Logo" height={1} width={1}  sx={{position: 'relative', top: '1px'}}/>
+      <Box display={'flex'} component={GatsbyLink} to="/" title="Napa Valley Composite Cycling Team" width={115} height={95}>
+        <Box component={'img'} src={Logo} alt="Rebobs Logo" height={1} width={1}/>
       </Box>
 
       {/* TOGGLE SIDEBAR BUTTONS */}
  <Box sx={{display: {xs: 'none', md: 'flex'}}} alignItems={'center'}>
         <Box marginRight={2}>
-          <Button
-            color="primary"
+          <Button variant={'text'}
             component={GatsbyLink}
             to="/about"
-            size="large"
           >
             About
           </Button>

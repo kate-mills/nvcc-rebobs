@@ -56,13 +56,15 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
       <AppBar
         position={'sticky'}
         sx={{
+          marginTop: 0,
+          paddingTop: 1,
           top: 0,
           backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
-          minHeight:100 
+          minHeight:106,
         }}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={'0 !important'}>
+        <Container paddingY={0}>
           <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} colorInvert={trigger ? false : colorInvert} />
         </Container>
       </AppBar>

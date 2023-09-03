@@ -13,7 +13,8 @@ const SidebarNav = () => {
           component={GatsbyLink}
           to="/"
           title="NAPA VALLEY COMPOSITE CYCLING"
-          width={{ xs: 100, md: 120 }}
+          width={115}
+          height={95}
         >
           <Box component={'img'} src={logoImg} height={1} width={1} />
         </Box>

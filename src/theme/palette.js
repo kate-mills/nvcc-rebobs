@@ -23,6 +23,10 @@ export const light = {
     main: '#050501',
     contrastText: '#fff',
   },
+  red: {
+  main: '#d3551f',
+  contrastText: '#fff',
+  },
   yellow: {
     light: '#fad540',
     main: '#f9cb11',

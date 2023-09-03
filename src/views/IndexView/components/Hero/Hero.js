@@ -108,7 +108,7 @@ const Hero = () => {
                 sx={{ height: 54 }}
                 label="Full name"
                 variant="outlined"
-                color="secondary"
+                color="primary"
                 size="medium"
                 id="fullName"
                 name="fullName"
@@ -129,7 +129,7 @@ const Hero = () => {
                 label="Email"
                 type="email"
                 variant="outlined"
-                color="secondary"
+                color="primary"
                 size="medium"
                 name="email"
                 fullWidth
@@ -149,7 +149,7 @@ const Hero = () => {
                 label="I want to"
                 placeholder="I want to"
                 variant="outlined"
-                color="secondary"
+                color="primary"
                 size="medium"
                 name="interest"
                 fullWidth
@@ -172,7 +172,7 @@ const Hero = () => {
             <Box marginBottom={4}>
               <TextField
                 sx={{ mb: 4 }}
-                color="secondary"
+                color="primary"
                 id="more"
                 name="more"
                 label="Tell Us More"
@@ -187,13 +187,12 @@ const Hero = () => {
               <Box />
               <Button
                 id="submit-contact-form"
-                sx={{ height: 54 }}
+                sx={{ height: 54, cursor: isDisabled ? 'not-allowed': 'unset' }}
                 variant="contained"
-                color="secondary"
+                color="primary"
                 size="medium"
                 fullWidth
                 type="submit"
-                disabled={isDisabled}
               >
                 Send It!
               </Button>

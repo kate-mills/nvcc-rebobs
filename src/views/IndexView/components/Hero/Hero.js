@@ -277,7 +277,7 @@ const Hero = () => {
           width: 1,
           height: 1,
           backgroundColor: theme.palette.primary.main,
-          backgroundImage: `linear-gradient(315deg, ${theme.palette.secondary.dark} 0%, #000000 74%)`,
+          backgroundImage: `linear-gradient(315deg, #ac8a10 0%, #000000 74%)`,
           opacity: '0.8',
           zIndex: 1,
         }}

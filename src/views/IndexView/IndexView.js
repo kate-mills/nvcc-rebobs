@@ -10,7 +10,7 @@ const IndexView = () => {
   return (
     <Main>
       <Hero />
-      <Box bgcolor={'secondary.dark'}>
+      <Box bgcolor={'#f26122'}>
         <Container>
           <Description />
         </Container>

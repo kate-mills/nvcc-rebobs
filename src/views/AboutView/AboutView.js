@@ -47,7 +47,7 @@ const AboutView = () => {
 
       <Container paddingY={'0 !important'}>
         <Box mt={4}>
-          <Typography gutterBottom variant="h6" color={'primary.main'}>
+          <Typography gutterBottom variant="h6" color={theme.logo.orange} fontWeight={600}>
             Students from ALL Napa Middle & High Schools are welcome to join!
           </Typography>
     <Box width={1}>

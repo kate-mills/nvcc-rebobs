@@ -17,7 +17,6 @@ import Hero from './components/Hero'
 
 const AboutView = () => {
   const theme = useTheme()
-  console.log(theme)
   return (
     <Main>
       <Box

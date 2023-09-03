@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import { alpha, useTheme } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -28,21 +27,16 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       {/* TOGGLE SIDEBAR BUTTONS */}
  <Box sx={{display: {xs: 'none', md: 'flex'}}} alignItems={'center'}>
         <Box marginRight={2}>
-          <Box 
-            component={GatsbyLink}
-            to="/about"
-            fontWeight={700}
-          ><Typography variant={'button'}>About</Typography></Box>
-            
-        </Box>
+    {/*<Box component={GatsbyLink} to="/about" fontWeight={700} ><Typography variant={'button'}>About</Typography></Box> */}
+      </Box>
         <Box>
           <Button
             variant="contained"
             color="primary"
             component={GatsbyLink}
-            to="/contact/"
+            to="/about/"
             size="large">
-            Contact
+            About
           </Button>
         </Box>
       </Box>

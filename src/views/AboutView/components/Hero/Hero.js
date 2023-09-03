@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
+import GatsbyLink from 'components/Link'
 import heroImg from 'images/about-us.webp'
 
 import Container from 'components/Container'
@@ -31,7 +32,7 @@ const Hero = () => {
           join us as we compete against highschools from around California.
         </Typography>
       </Box>
-      <Button variant="contained" color="primary" size="large">
+      <Button variant="contained" color="primary" size="large" component={GatsbyLink} to="/contact/">
         Contact us
       </Button>
     </Box>

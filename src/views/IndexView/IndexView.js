@@ -4,15 +4,15 @@ import Box from '@mui/material/Box'
 import Container from 'components/Container'
 import Main from 'layouts/Main'
 
-import { Hero } from './components'
+import { Hero, Description } from './components'
 
 const IndexView = () => {
   return (
-    <Main colorInvert={true}>
+    <Main>
       <Hero />
-      <Box bgcolor={'yellow.main'}>
+      <Box bgcolor={'secondary.dark'}>
         <Container>
-      {/*<Description />*/}
+          <Description />
         </Container>
       </Box>
     </Main>

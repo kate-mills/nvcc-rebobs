@@ -1,13 +1,3 @@
-/*
-const rebobs_colors = {
-  red: '#e60202',
-  orange: '#d3551f',
-  yellow: '#f9cb11',
-  purple: '#551a8b',
-  black: '#050501',
-  white: '#fffefe',
-}*/
-
 export const light = {
   alternate: {
     main: '#f7faff',
@@ -16,27 +6,20 @@ export const light = {
   cardShadow: 'rgba(23, 70, 161, .11)',
   mode: 'light',
   primary: {
-    main: '#d3551f',
+    main : "#424b55",
+    dark : "#0d151e",
+    light : "#424b55",
     contrastText: '#fff',
   },
   secondary: {
-    main: '#050501',
-    contrastText: '#fff',
-  },
-  red: {
-  main: '#d3551f',
-  contrastText: '#fff',
-  },
-  yellow: {
-    light: '#fad540',
-    main: '#f9cb11',
-    dark: '#ae8e0b',
-    darkest: '#796307',
-    contrastText: '#000',
+    light: '#ffb74d',
+    main: '#f9b934',
+    dark: '#FF9800',
+    contrastText: 'rgba(0, 0, 0, 0.87)',
   },
   text: {
-    primary: '#050501',
-    secondary: '#504b4c',
+    primary: '#1e2022',
+    secondary: '#677788',
   },
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
@@ -45,7 +28,7 @@ export const light = {
     level2: '#f5f5f5',
     level1: '#ffffff',
   },
-}
+};
 
 export const dark = {
   alternate: {
@@ -58,25 +41,17 @@ export const dark = {
     white: '#fff',
   },
   mode: 'dark',
-
-  yellow: {
-    light: '#fad540',
-    main: '#f9cb11',
-    dark: '#ae8e0b',
-    darkest: '#796307',
-    contrastText: '#000',
-  },
   primary: {
-    light: '#88c4c7',
-    main: '#6bb6ba',
-    dark: '#168187',
-    contrastText: '#000000',
+    main: '#1976d2',
+    light: '#2196f3',
+    dark: '#0d47a1',
+    contrastText: '#fff',
   },
   secondary: {
-    light: '#adba39',
-    main: '#99A908',
-    dark: '#6b7605',
-    contrastText: '#000000',
+    light: '#FFEA41',
+    main: '#FFE102',
+    dark: '#DBBE01',
+    contrastText: 'rgba(0, 0, 0, 0.87)',
   },
   text: {
     primary: '#EEEEEF',
@@ -89,4 +64,4 @@ export const dark = {
     level2: '#333',
     level1: '#2D3748',
   },
-}
+};

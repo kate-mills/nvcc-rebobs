@@ -5,21 +5,24 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import AppBar from '@mui/material/AppBar'
-
 import useScrollTrigger from '@mui/material/useScrollTrigger'
+
+import Container from 'components/Container'
+
 import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import Zoom from '@mui/material/Zoom'
 import NoSsr from '@mui/material/NoSsr'
 
-import Container from 'components/Container'
-
 import {Topbar, Sidebar, Footer} from './components'
+
+
 
 import pages from '../navigation'
 
 const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
   const theme = useTheme()
+  console.log(theme)
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true
   })
@@ -55,16 +58,10 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
     <Box id="js--main-top">
       <AppBar
         position={'sticky'}
-        sx={{
-          marginTop: 0,
-          paddingTop: 1,
-          top: 0,
-          backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
-          minHeight:106,
-        }}
+        sx={{top: 0, backgroundColor: trigger ? theme.palette.background.paper : bgcolor}}
         elevation={trigger ? 1 : 0}
       >
-        <Container paddingY={0}>
+        <Container paddingY={'2px !important'}>
           <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} colorInvert={trigger ? false : colorInvert} />
         </Container>
       </AppBar>

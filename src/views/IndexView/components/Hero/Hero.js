@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import Box from '@mui/material/Box'
@@ -42,6 +42,24 @@ const validationSchema = yup.object({
 const Hero = () => {
   const theme = useTheme()
 
+  const [formState, setFormState] = useState('')
+  const [userMsg, setUserMsg] = useState('')
+  const [btnText, setBtnText] = useState('Send It!')
+  const [startTimer, setStartTimer ] = useState(null)
+
+  useEffect(() => {
+    setUserMsg(prevMsg => {
+      return formState ? formState : prevMsg
+    })
+  }, [formState])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBtnText('Send It!')
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [startTimer])
+
   const GridItemHeadlineBlock = () => (
     <Box marginBottom={4} data-aos="fade-up">
       <Typography
@@ -52,8 +70,7 @@ const Hero = () => {
           color: 'common.white',
         }}
       >
-        {' '}
-        Mountain Bike Racing And Riding For All!!
+    Napa Valley Composite Cycling Team
       </Typography>
       <Typography
         variant="h6"
@@ -63,11 +80,7 @@ const Hero = () => {
           fontWeight: 500,
           color: 'common.white',
         }}
-      >
-        Napa Valley Composite Cycling Team is a NICA affiliated, middle and
-        high-school age (6-12 grade) mountain bike team.
-        <br />
-        Whether you are a beginner, or have been racing before, our team would
+      >Whether you are a beginner, or have been racing before, our team would
         love to have you join us as we compete against highschools from around
         California.
       </Typography>
@@ -86,7 +99,25 @@ const Hero = () => {
     const formik = useFormik({
       initialValues,
       validationSchema: validationSchema,
-      onSubmit: handleSubmitContactForm,
+      onSubmit: (values, actions) => {
+        try {
+          setFormState('init')
+          actions.setSubmitting(true)
+          handleSubmitContactForm(values, { ...actions })
+        } catch (err) {
+          setBtnText('Error!')
+          setFormState(
+            'We apologize, but there seems to be an issue. Please try again later.'
+          )
+          console.log(err)
+        } finally {
+          setBtnText('Success!')
+          setStartTimer(true)
+          setFormState(
+            `Thank you, ${values.fullName}! One of our coaches will be in touch shortly.`
+          )
+        }
+      },
     })
 
     const isDisabled =
@@ -95,8 +126,12 @@ const Hero = () => {
     return (
       <Box padding={{ xs: 3, sm: 6 }} width={1} component={Card} boxShadow={1}>
         <form
+          onSubmit={event => {
+            event.preventDefault()
+            formik.handleSubmit()
+          }}
+          id="contact-form"
           autoComplete="off"
-          onSubmit={formik.handleSubmit}
           name={'contact-form'}
           data-netlify={'true'}
           method="POST"
@@ -178,7 +213,7 @@ const Hero = () => {
                 label="Tell Us More"
                 multiline
                 fullWidth
-                rows={2}
+                minRows={2}
                 maxRows={4}
                 value={formik.values.more}
                 onChange={formik.handleChange}
@@ -187,23 +222,30 @@ const Hero = () => {
               <Box />
               <Button
                 id="submit-contact-form"
-                sx={{ height: 54, cursor: isDisabled ? 'not-allowed': 'unset' }}
+                sx={{
+                  height: 54,
+                  cursor: isDisabled ? 'not-allowed' : 'unset',
+                }}
                 variant="contained"
                 color="primary"
                 size="medium"
                 fullWidth
                 type="submit"
               >
-                Send It!
+                {btnText}
               </Button>
             </Box>
-            <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
+            <Box marginBottom={4} marginX={{ xs: -3, sm: -6 }}>
               <Divider />
             </Box>
-            <Box>
-              <Typography component="p" variant="body2" align="left">
-                One of our coaches will get back to you.
-                {/*<Box component="a" href="" color={theme.palette.text.primary} fontWeight={'700'} >Email or contact</Box>*/}
+            <Box sx={{ minHeight: 20.016 }}>
+              <Typography
+                component="p"
+                variant="body2"
+                align="left"
+                sx={{ minHeight: '20.016' }}
+              >
+                {userMsg}
               </Typography>
             </Box>
           </Box>
@@ -221,8 +263,7 @@ const Hero = () => {
         marginTop: -13,
         paddingTop: 13,
         backgroundColor: theme.palette.alternate.main,
-        background:
-          `url(${bgImg}) no-repeat center`,
+        background: `url(${bgImg}) no-repeat center`,
         backgroundSize: 'cover',
       }}
     >
@@ -236,7 +277,7 @@ const Hero = () => {
           width: 1,
           height: 1,
           backgroundColor: theme.palette.primary.main,
-          backgroundImage: `linear-gradient(315deg, ${theme.palette.primary.main} 0%, #000000 74%)`,
+          backgroundImage: `linear-gradient(315deg, ${theme.palette.secondary.dark} 0%, #000000 74%)`,
           opacity: '0.8',
           zIndex: 1,
         }}

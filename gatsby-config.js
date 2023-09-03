@@ -15,7 +15,7 @@ module.exports = {
         start_url: `/`,
         icon: `src/images/icon.png`,
         background_color: `#ffffff`,
-        theme_color: `#ffffff`,
+        theme_color: `#f9cb11`,
         display: `minimal-ui`,
         crossOrigin: `use-credentials`,
       },

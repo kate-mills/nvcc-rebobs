@@ -6,6 +6,11 @@ import { light, dark } from './palette'
 const getTheme = (mode, themeToggler) =>
   responsiveFontSizes(
     createTheme({
+      logo: {
+        yellow: '#f8ca10',
+        orange: '#f36122',
+        red: '#aa1f2e',
+      },
       palette: mode === 'light' ? light : dark,
       shadows: shadows(mode),
       typography: {

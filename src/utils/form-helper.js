@@ -1,4 +1,4 @@
-import {navigate} from 'gatsby'
+//import {navigate} from 'gatsby'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -7,22 +7,18 @@ const encode = (data) => {
 }
 
 const handleSubmitContactForm = async (values, actions) => {
-  actions.setSubmitting(true)
+  console.log(actions)
+  const {setSubmitting, resetForm} = actions
+
   fetch('/', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: encode({'form-name': 'contact-form', ...values})
-  })
-    .then(() => {
+  }).then(() => {
+      setSubmitting(false)
+      resetForm()
       console.log('success')
-      actions.resetForm()
-    })
-
-    .catch((error) => console.log(error))
-    .finally(() => {
-      actions.setSubmitting(false)
-      navigate('/about/')
-    })
+    }).catch((error) => console.log(error))
 }
 
 export {handleSubmitContactForm}

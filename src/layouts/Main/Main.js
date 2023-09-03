@@ -22,7 +22,6 @@ import pages from '../navigation'
 
 const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
   const theme = useTheme()
-  console.log(theme)
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true
   })

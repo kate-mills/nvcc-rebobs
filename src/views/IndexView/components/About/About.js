@@ -21,7 +21,7 @@ const About = () => {
     <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
-          Mountain Bike Racing & Riding For All
+          Opportunities for Everyone 
         </Typography>
       </Box>
       <Box marginBottom={4}>

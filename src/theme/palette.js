@@ -23,6 +23,7 @@ export const light = {
   },
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
+    formAutofill: '#fff',
     paper: '#ffffff',
     default: '#ffffff',
     level2: '#f5f5f5',
@@ -53,12 +54,18 @@ export const dark = {
     dark: '#DBBE01',
     contrastText: 'rgba(0, 0, 0, 0.87)',
   },
+  orange: {
+    main: '#F46602',
+    constrastText: 'rgba(0, 0, 0, 0.87)',
+  },
   text: {
     primary: '#EEEEEF',
     secondary: '#AEB0B4',
+    onLight: '#747578',
   },
   divider: 'rgba(255, 255, 255, 0.12)',
   background: {
+    formAutofill: '#2d364e',
     paper: '#222B45',
     default: '#222B45',
     level2: '#333',

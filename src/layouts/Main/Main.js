@@ -8,6 +8,7 @@ import AppBar from '@mui/material/AppBar'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 import Container from 'components/Container'
+import OurSponsors from 'components/OurSponsors'
 
 import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
@@ -67,7 +68,7 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
       <Sidebar onClose={handleSidebarClose} open={open} variant="temporary" pages={pages} />
       <main>
         {children}
-        <Divider />
+        <Divider /> <OurSponsors/> <Divider />
       </main>
       <Container paddingY={4}>
         <Footer />

@@ -16,7 +16,6 @@ import bgImg from 'images/mountain-bike-team.webp'
 import { handleSubmitContactForm } from 'utils/form-helper'
 
 import Container from 'components/Container'
-import 'global-styles/overrides.css'
 
 const activityOptions = ['Join', 'Volunteer', 'Sponsor', 'Donate', 'Other']
 
@@ -45,7 +44,7 @@ const Hero = () => {
   const [formState, setFormState] = useState('')
   const [userMsg, setUserMsg] = useState('')
   const [btnText, setBtnText] = useState('Send It!')
-  const [startTimer, setStartTimer ] = useState(null)
+  const [startTimer, setStartTimer] = useState(null)
 
   useEffect(() => {
     setUserMsg(prevMsg => {
@@ -56,7 +55,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setBtnText('Send It!')
-    }, 3000)
+    }, 2000)
     return () => clearTimeout(timer)
   }, [startTimer])
 
@@ -70,7 +69,7 @@ const Hero = () => {
           color: 'common.white',
         }}
       >
-    Napa Valley Composite Cycling Team
+        Napa Valley Composite Cycling Team
       </Typography>
       <Typography
         variant="h6"
@@ -80,7 +79,8 @@ const Hero = () => {
           fontWeight: 500,
           color: 'common.white',
         }}
-      >Whether you are a beginner, or have been racing before, our team would
+      >
+        Whether you are a beginner, or have been racing before, our team would
         love to have you join us as we compete against highschools from around
         California.
       </Typography>
@@ -131,14 +131,20 @@ const Hero = () => {
             formik.handleSubmit()
           }}
           id="contact-form"
-          autoComplete="off"
           name={'contact-form'}
           data-netlify={'true'}
           method="POST"
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <Box display="flex" flexDirection={'column'}>
-            <Box marginBottom={4}>
+            <Box
+              marginBottom={4}
+              sx={{
+                '& input': {
+                  WebkitBoxShadow: `0 0 0 100px ${theme.palette.background.formAutofill} inset !important`,
+                },
+              }}
+            >
               <TextField
                 sx={{ height: 54 }}
                 label="Full name"
@@ -157,14 +163,20 @@ const Hero = () => {
                 helperText={formik.touched.fullName && formik.errors.fullName}
               />
             </Box>
-            <Box marginBottom={4}>
+            <Box
+              marginBottom={4}
+              sx={{
+                '& input': {
+                  WebkitBoxShadow: `0 0 0 100px ${theme.palette.background.formAutofill} inset !important`,
+                },
+              }}
+            >
               <TextField
                 sx={{ height: 54 }}
                 id="email"
                 label="Email"
                 type="email"
                 variant="outlined"
-                color="primary"
                 size="medium"
                 name="email"
                 fullWidth
@@ -235,10 +247,10 @@ const Hero = () => {
                 {btnText}
               </Button>
             </Box>
-            <Box marginBottom={4} marginX={{ xs: -3, sm: -6 }}>
+            <Box marginBottom={0} marginX={{ xs: -3, sm: -6 }}>
               <Divider />
             </Box>
-            <Box sx={{ minHeight: 20.016 }}>
+            <Box sx={{ pt: 1, minHeight: 28.016 }}>
               <Typography
                 component="p"
                 variant="body2"
@@ -277,7 +289,7 @@ const Hero = () => {
           width: 1,
           height: 1,
           backgroundColor: theme.palette.primary.main,
-          backgroundImage: `linear-gradient(315deg, #ac8a10 0%, #000000 74%)`,
+          backgroundImage: `linear-gradient(315deg, ${theme.palette.primary.main} 0%, #000000 74%)`,
           opacity: '0.8',
           zIndex: 1,
         }}

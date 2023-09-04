@@ -1,17 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import Divider from '@mui/material/Divider'
+import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
-import heroImg from 'images/about-us.webp'
+import teamImg from 'images/practice.webp'
 
 import Container from 'components/Container'
 
-const Hero = () => {
+const About = () => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -20,21 +20,40 @@ const Hero = () => {
   const LeftSide = () => (
     <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
-        <Typography variant="h2" color="text.onLight" sx={{ fontWeight: 700 }}>
-          About Us
+        <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
+          Mountain Bike Racing & Riding For All
         </Typography>
       </Box>
-      <Box marginBottom={3}>
-        <Typography variant="h6" component="p" color="text.onLight">
-          Napa Valley Composite Cycling Team is a NICA affiliated, middle and
-          high-school age (6-12 grade) mountain bike team. Whether you are a
-          beginner, or have been racing before, our team would love to have you
-          join us as we compete against highschools from around California.
+      <Box marginBottom={4}>
+        <Typography variant="h6" color="text.secondary" gutterBottom>
+          Join the Napa Valley Composite Cycling Team
+        </Typography>
+        <Typography component="p">
+          The Napa Valley Composite Cycling Team is a NICA-affiliated mountain
+          bike team offering middle and high school students (6-12 grades) an
+          exciting opportunity to participate in bike racing. Whether you are
+          new to mountain bike riding or have prior experience in racing, our
+          team welcomes you to join us as we compete with high schools across
+          California.
         </Typography>
       </Box>
-      <Button variant="contained" color="primary" size="large" component={GatsbyLink} to="/contact/">
-        Contact us
-      </Button>
+      <Box
+        display="flex"
+        flexDirection={{ xs: 'column', sm: 'row' }}
+        alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+        to={'/about/'}
+        component={GatsbyLink}
+      >
+        {' '}
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          fullWidth={isMd ? false : true}
+        >
+          About us
+        </Button>
+      </Box>
     </Box>
   )
 
@@ -51,7 +70,7 @@ const Hero = () => {
         <Box
           component={'img'}
           loading="lazy"
-          src={heroImg}
+          src={teamImg}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}
@@ -74,14 +93,8 @@ const Hero = () => {
           display={'flex'}
           flexDirection={{ xs: 'column', md: 'row' }}
           position={'relative'}
-          minHeight={{ md: 600 }}
         >
-          <Box
-            width={1}
-            order={{ xs: 2, md: 1 }}
-            display={'flex'}
-            alignItems={'center'}
-          >
+          <Box width={1} order={{ xs: 2, md: 1 }}>
             <Container>
               <LeftSide />
             </Container>
@@ -115,14 +128,6 @@ const Hero = () => {
                     width: 1,
                     height: 1,
                     position: { xs: 'relative', md: 'absolute' },
-                    clipPath: {
-                      xs: 'none',
-                      md: 'polygon(10% 0%, 100% 0, 100% 100%, 0% 100%)',
-                    },
-                    shapeOutside: {
-                      xs: 'none',
-                      md: 'polygon(10% 0%, 100% 0, 100% 100%, 0% 100%)',
-                    },
                   }}
                 >
                   <RightSide />
@@ -132,9 +137,8 @@ const Hero = () => {
           </Box>
         </Box>
       </Container>
-      <Divider />
     </Box>
   )
 }
 
-export default Hero
+export default About

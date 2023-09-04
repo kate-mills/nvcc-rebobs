@@ -3,18 +3,21 @@ import { createTheme } from '@mui/material/styles'
 import shadows from './shadows'
 import { light, dark } from './palette'
 
-const getTheme = (mode, themeToggler) =>
+const getTheme = (mode = 'light', themeToggler) =>
   responsiveFontSizes(
     createTheme({
       logo: {
-        yellow: '#f8ca10',
-        orange: '#f36122',
-        red: '#aa1f2e',
+        yellow: '#f2cc11', /*#f8ca10*/
+        orange: ' #f26602',
+        red: ' #e60202',
+        gray: ' #696969',
+        purple: '#551a8b',
+        darkGray: '#292929',
       },
       palette: mode === 'light' ? light : dark,
       shadows: shadows(mode),
       typography: {
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: '"Inter", sans-serif',
         button: {
           textTransform: 'none',
           fontWeight: 'medium',

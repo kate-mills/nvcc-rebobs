@@ -1,9 +1,17 @@
-import * as React from "react"
-import Layout from '../components/Layout'
-import {Link} from 'gatsby'
+import * as React from 'react'
+
+import NotFoundView from 'views/NotFoundView'
 
 export default function ErrorPage() {
-  return <Layout>
-    Sorry, that page doesn't exist. Return to the <Link to="/">home page</Link>
-    </Layout>
+  return <NotFoundView />
+}
+
+
+
+export const Head = () => {
+  return (
+    <>
+      <title>404 | Napa, CA | Napa Valley Composite Cycling Team</title>
+    </>
+  )
 }

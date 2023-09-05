@@ -7,7 +7,7 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
   const { title="", description="", image } = pageContext
 
   const seo = { 
-    title: `${title} Napa, CA | Napa Valley Composite Cycling Team`,
+    title: `${title} | Napa, CA | Napa Valley Composite Cycling Team`,
     img: image || `${baseUrl}rebob.webp`,
     canonical: `${canonicalUrl}${location.pathname}`,
     url: `${baseUrl}${location.pathname}`,

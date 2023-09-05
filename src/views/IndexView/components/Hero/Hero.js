@@ -31,10 +31,12 @@ const validationSchema = yup.object({
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
+
   interest: yup
     .string()
     .oneOf(activityOptions, 'Invalid Selection')
     .required('Please choose your interest'),
+  grade: yup.string(),
   more: yup.string().trim(),
 })
 
@@ -93,6 +95,7 @@ const Hero = () => {
       email: '',
       activity: '',
       interest: '',
+      grade: '',
       more: '',
     }
 
@@ -215,7 +218,25 @@ const Hero = () => {
                 ))}
               </TextField>
             </Box>
-
+            <Box marginBottom={4}>
+              <TextField
+                sx={{ height: 54 }}
+                id="grade"
+                name={'grade'}
+                label="Student Grade"
+                placeholder="Student Grade"
+                variant="outlined"
+                color="primary"
+                size="medium"
+                fullWidth
+                value={formik.values.grade}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                error={
+                  formik.touched.interest && Boolean(formik.errors.interest)
+                }
+              />
+            </Box>
             <Box marginBottom={4}>
               <TextField
                 sx={{ mb: 4 }}

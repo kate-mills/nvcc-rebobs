@@ -7,8 +7,8 @@ const encode = (data) => {
 }
 
 const handleSubmitContactForm = async (values, actions) => {
-  console.log(actions)
   const {setSubmitting, resetForm} = actions
+
 
   fetch('/', {
     method: 'POST',

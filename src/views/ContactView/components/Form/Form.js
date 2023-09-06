@@ -11,7 +11,7 @@ import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 
-import { handleSubmitContactForm } from 'utils/form-helper'
+import { handleSubmitContactForm } from 'utils/conditional-form-helper'
 
 const activityOptions = ['Volunteer', 'Join', 'Sponsor', 'Donate', 'Other']
 
@@ -75,7 +75,7 @@ const ContactForm = () => {
         try {
           setFormState('init')
           actions.setSubmitting(true)
-          handleSubmitContactForm(values, 'contact-form-conditional', { ...actions})
+          handleSubmitContactForm(values, { ...actions})
         } catch (err) {
           setFormState(
             'We apologize, but there seems to be an issue. Please try again later.'

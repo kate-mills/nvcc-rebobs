@@ -93,7 +93,6 @@ const Hero = () => {
     const initialValues = {
       fullName: '',
       email: '',
-      activity: '',
       interest: '',
       grade: '',
       more: '',
@@ -106,7 +105,7 @@ const Hero = () => {
         try {
           setFormState('init')
           actions.setSubmitting(true)
-          handleSubmitContactForm(values,'contact-form', { ...actions })
+          handleSubmitContactForm(values,{ ...actions })
         } catch (err) {
           setBtnText('Error!')
           setFormState(

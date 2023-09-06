@@ -6,14 +6,14 @@ const encode = (data) => {
     .join('&')
 }
 
-const handleSubmitContactForm = async (values, actions) => {
+const handleSubmitContactForm = async (values={}, formName="contact-form", actions={}) => {
   const {setSubmitting, resetForm} = actions
 
 
   fetch('/', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: encode({'form-name': 'contact-form', ...values})
+    body: encode({'form-name': formName, ...values})
   }).then(() => {
       setSubmitting(false)
       resetForm()
@@ -22,3 +22,4 @@ const handleSubmitContactForm = async (values, actions) => {
 }
 
 export {handleSubmitContactForm}
+

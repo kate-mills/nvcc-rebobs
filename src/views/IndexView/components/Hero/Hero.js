@@ -106,7 +106,7 @@ const Hero = () => {
         try {
           setFormState('init')
           actions.setSubmitting(true)
-          handleSubmitContactForm(values, { ...actions })
+          handleSubmitContactForm(values,'contact-form', { ...actions })
         } catch (err) {
           setBtnText('Error!')
           setFormState(

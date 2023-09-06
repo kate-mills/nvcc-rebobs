@@ -63,7 +63,6 @@ const ContactForm = () => {
     const initialValues = {
       fullName: '',
       email: '',
-      activity: '',
       interest: '',
       grade: '',
       more: '',
@@ -75,9 +74,8 @@ const ContactForm = () => {
       onSubmit: (values, actions) => {
         try {
           setFormState('init')
-          console.log(values)
           actions.setSubmitting(true)
-          handleSubmitContactForm(values, { ...actions })
+          handleSubmitContactForm(values, 'contact-form-conditional', { ...actions})
         } catch (err) {
           setFormState(
             'We apologize, but there seems to be an issue. Please try again later.'

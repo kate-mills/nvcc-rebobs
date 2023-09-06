@@ -1,11 +1,11 @@
 import React from 'react'
-import IndexView from 'views/IndexView'
+import ContactView from 'views/ContactView'
 
 import Seo from 'components/Seo'
-//import SeoImg from 'images/website.jpg'
+import SeoImg from 'images/2023/Team-Photo-Skyline.webp'
 
 const ContactPage = () => {
-  return <IndexView />
+  return <ContactView />
 }
 
 export default ContactPage
@@ -15,7 +15,8 @@ export const Head = ({location}) => {
     <Seo
       location={location}
       pageContext={{
-        title: 'Contact',
+      title: 'Contact',
+        image: {SeoImg},
         description: `We're always looking for volunteers, sponsors, coaching help, parent support, friends to ride with, and race support!`,
       }}
     />

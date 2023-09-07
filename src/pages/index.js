@@ -1,10 +1,10 @@
 import React from 'react'
-import IndexView from 'views/IndexView'
+import ContactView from 'views/ContactView'
 
 import Seo from 'components/Seo'
 
 const IndexPage = () => {
-  return <IndexView />
+  return <ContactView />
 }
 
 export default IndexPage

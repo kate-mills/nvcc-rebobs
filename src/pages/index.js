@@ -2,7 +2,7 @@ import React from 'react'
 import IndexView from 'views/IndexView'
 
 import Seo from 'components/Seo'
-import SeoImg from 'images/2023/Team-Photo-Skyline.webp'
+import SeoImg from 'images/about-us.webp'
 
 const IndexPage = () => {
   return <IndexView />

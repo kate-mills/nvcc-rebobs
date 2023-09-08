@@ -7,7 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
-import heroImg from 'images/2023/Granite-Bay-Girls.webp'
+import heroImg from 'images/Granite-Bay-Girls.webp'
 
 import Container from 'components/Container'
 

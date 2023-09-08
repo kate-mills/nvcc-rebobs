@@ -4,7 +4,8 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
-import bgImg from 'images/mountain-bike-team.webp'
+import bgImg from 'images/contact-hero.webp'
+
 import ContactForm from '../Form'
 
 import Container from 'components/Container'

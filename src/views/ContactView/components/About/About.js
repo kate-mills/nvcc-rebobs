@@ -8,7 +8,7 @@ import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
 //import teamImg from 'images/practice.webp'
-import teamImg from 'images/2023/Team-Photo-Skyline.webp'
+import teamImg from 'images/Team-Photo-Skyline.webp'
 
 import Container from 'components/Container'
 

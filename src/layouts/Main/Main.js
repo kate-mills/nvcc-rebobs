@@ -21,7 +21,7 @@ import {Topbar, Sidebar, Footer} from './components'
 
 import pages from '../navigation'
 
-const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
+const Main = ({children, colorInvert = false, bgcolor = 'transparent', isDarkHero=false}) => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true
@@ -58,12 +58,18 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
     <Box id="js--main-top">
       <AppBar
         position={'sticky'}
-        sx={{top: 0, backgroundColor: trigger ? theme.palette.background.paper : bgcolor}}
-        elevation={trigger ? 1 : 0}
-      >
+        sx={{
+          top: 0,
+            backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
+            color:(trigger || !isDarkHero) 
+            ? 'common.black'
+            : 'common.white'
+        }}
+        elevation={trigger ? 1 : 0}>
         <Container paddingY={'2px !important'}>
-          <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} colorInvert={trigger ? false : colorInvert} />
+          <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} colorInvert={trigger ? false : colorInvert} isDarkHero={isDarkHero}/>
         </Container>
+
       </AppBar>
       <Sidebar onClose={handleSidebarClose} open={open} variant="temporary" pages={pages} />
       <main>

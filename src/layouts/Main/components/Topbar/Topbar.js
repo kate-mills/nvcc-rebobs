@@ -2,15 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import { alpha, useTheme } from '@mui/material/styles'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import GatsbyLink from 'components/Link'
 import Logo from 'images/rebob.webp'
+import useScrollTrigger from '@mui/material/useScrollTrigger'
 
-
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
-  const theme = useTheme()
+const Topbar = ({
+  onSidebarOpen,
+  pages,
+  colorInvert = false,
+  isDarkHero = false,
+}) => {
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 75,
+  })
 
   return (
     <Box
@@ -20,23 +27,43 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
       width={1}
       height={1}
     >
-      <Box display={'flex'} component={GatsbyLink} to="/" title="Napa Valley Composite Cycling Team" width={115} height={95}>
-        <Box component={'img'} src={Logo} alt="Rebobs Logo" height={1} width={1}/>
+      <Box
+        display={'flex'}
+        component={GatsbyLink}
+        to="/"
+        title="Napa Valley Composite Cycling Team"
+        width={115}
+        height={95}
+      >
+        <Box
+          component={'img'}
+          src={Logo}
+          alt="Rebobs Logo"
+          height={1}
+          width={1}
+        />
       </Box>
 
       {/* TOGGLE SIDEBAR BUTTONS */}
- <Box sx={{display: {xs: 'none', md: 'flex'}}} alignItems={'center'}>
-        <Box marginRight={2}>
-    {/*<Box component={GatsbyLink} to="/about" fontWeight={700} ><Typography variant={'button'}>About</Typography></Box> */}
-      </Box>
+      <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+        <Box
+          component={GatsbyLink}
+          to={'/contact/'}
+          color={'inherit'}
+          marginRight={2}
+        >
+          Contact
+        </Box>
         <Box>
           <Button
             variant="contained"
             color="primary"
             component={GatsbyLink}
             to="/about/"
-            size="large">
-            About
+            size="large"
+          >
+            {' '}
+            About{' '}
           </Button>
         </Box>
       </Box>
@@ -52,7 +79,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             marginLeft: 1,
             minWidth: 'auto',
             padding: 1,
-            borderColor: alpha(theme.palette.divider, 0.2),
+            borderColor:
+              trigger || !isDarkHero ? 'common.black' : 'common.white',
+            color: trigger || !isDarkHero ? 'common.black' : 'common.white',
           }}
         >
           <MenuIcon />

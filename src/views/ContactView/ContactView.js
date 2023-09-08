@@ -3,18 +3,16 @@ import Box from '@mui/material/Box'
 
 import Main from 'layouts/Main'
 
-import { Hero, About, } from './components'
+import { Hero, About } from './components'
 
-const IndexView = () => {
+const ContactView = () => {
   return (
-    <Main>
-    <Hero/>
+    <Main isDarkHero={true}>
+      <Hero />
       <Box>
         <About />
       </Box>
-
     </Main>
   )
 }
-
-export default IndexView
+export default ContactView

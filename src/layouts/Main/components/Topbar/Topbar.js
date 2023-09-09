@@ -46,14 +46,8 @@ const Topbar = ({
 
       {/* TOGGLE SIDEBAR BUTTONS */}
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box
-          component={GatsbyLink}
-          to={'/contact/'}
-          color={'inherit'}
-          marginRight={2}
-        >
-          Contact
-        </Box>
+        <Box component={GatsbyLink} to={'/team/'} color={'inherit'} marginRight={2}>Team</Box>
+        <Box component={GatsbyLink} to={'/contact/'} color={'inherit'} marginRight={2}>Contact</Box>
         <Box>
           <Button
             variant="contained"

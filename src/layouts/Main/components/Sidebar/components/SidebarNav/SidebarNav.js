@@ -20,15 +20,22 @@ const SidebarNav = () => {
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
+        <Box marginTop={1}>
+          <Button
+            size={'large'}
+            variant="link"
+            color="primary"
+            fullWidth
+            component={GatsbyLink}
+            to="/team/"
+          >
+            Team{' '}
+          </Button>{' '}
+        </Box>
         <Box></Box>
         <Box marginTop={2}>
           <Button
-    color={'primary'}
+            color={'primary'}
             size={'large'}
             variant="outlined"
             fullWidth

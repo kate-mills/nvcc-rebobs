@@ -107,11 +107,11 @@ const Column = ({ data }) => {
           >
             <Box
               component={'img'}
-              loading={i > 5 ? 'lazy' : 'eager'}
+              loading={'lazy'}
               height={1}
               width={1}
               src={item.image}
-              alt="..."
+              alt=""
               maxHeight={{ xs: 400, sm: 600, md: 1 }}
               sx={{
                 transition: 'transform .7s ease !important',

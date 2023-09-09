@@ -83,6 +83,7 @@ const OurSponsors = () => {
                   <Box component={'a'} href={item.href} target="_blank">
                     <Box
                       component="img"
+                load={'lazy'}
                       width={1}
                       src={item.src}
                 title={item.title}

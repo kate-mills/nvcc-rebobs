@@ -107,7 +107,7 @@ const Column = ({ data }) => {
           >
             <Box
               component={'img'}
-              loading={'lazy'}
+              loading={i < 4 ? 'eager': 'lazy'}
               height={1}
               width={1}
               src={item.image}

@@ -5,7 +5,8 @@ import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import bgImg from 'images/Granite-Bay-Girls.webp'
+import bgImg from 'images/girls-in-granite-bay.jpg'
+
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';

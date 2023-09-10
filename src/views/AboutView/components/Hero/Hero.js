@@ -7,7 +7,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
-import heroImg from 'images/Granite-Bay-Girls.webp'
+import heroImg from 'images/girls-in-granite-bay.jpg'
 
 import Container from 'components/Container'
 
@@ -32,7 +32,13 @@ const Hero = () => {
           join us as we compete against highschools from around California.
         </Typography>
       </Box>
-      <Button variant="contained" color="primary" size="large" component={GatsbyLink} to="/contact/">
+      <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        component={GatsbyLink}
+        to="/contact/"
+      >
         Contact us
       </Button>
     </Box>
@@ -45,6 +51,7 @@ const Hero = () => {
           height: { xs: 'auto', md: 1 },
           '& img': {
             objectFit: 'cover',
+            objectPosition: '40% center',
           },
         }}
       >
@@ -56,6 +63,7 @@ const Hero = () => {
           maxHeight={{ xs: 300, md: 1 }}
           width={1}
           maxWidth={1}
+          alt="A row of girls on mountain bikes stand beside each other, each wearing their team's uniform and helmet."
         />
       </Box>
     )

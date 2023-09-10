@@ -2,7 +2,7 @@ import React from 'react'
 import AboutView from 'views/AboutView'
 
 import Seo from 'components/Seo'
-import SeoImg from 'images/Granite-Bay-Girls.webp'
+import SeoImg from 'images/girls-in-granite-bay.jpg'
 
 const AboutPage = () => {
   return <AboutView />

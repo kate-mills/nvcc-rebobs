@@ -2,6 +2,7 @@ require('dotenv').config()
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
+  siteMetadata: { siteUrl: `https://www.napavalleycompositecycling.com` },
   plugins: [
     'gatsby-plugin-top-layout',
     'gatsby-plugin-mui-emotion',

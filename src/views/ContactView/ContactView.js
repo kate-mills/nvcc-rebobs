@@ -3,14 +3,16 @@ import Box from '@mui/material/Box'
 
 import Main from 'layouts/Main'
 
+import teamImg from 'images/team2023.jpg'
+
 import { Hero, About } from './components'
 
 const ContactView = () => {
   return (
     <Main isDarkHero={true}>
-      <Hero />
+      <Hero bgImg={teamImg} />
       <Box>
-        <About />
+        <About img={teamImg} />
       </Box>
     </Main>
   )

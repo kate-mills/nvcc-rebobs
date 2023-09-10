@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
-import bgImg from 'images/contact-hero.webp'
+
 
 import ContactForm from '../Form'
 
@@ -12,7 +12,7 @@ import Container from 'components/Container'
 
 
 
-const Hero = () => {
+const Hero = ({bgImg}) => {
   const theme = useTheme()
 
   const GridItemHeadlineBlock = () => (
@@ -53,6 +53,7 @@ const Hero = () => {
         paddingTop: 13,
         backgroundColor: theme.palette.alternate.main,
         background: `url(${bgImg}) no-repeat center`,
+        backgroundPosition: `50% 80%`,
         backgroundSize: 'cover',
       }}
     >

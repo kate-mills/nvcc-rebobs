@@ -7,12 +7,10 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
-//import teamImg from 'images/practice.webp'
-import teamImg from 'images/Team-Photo-Skyline.webp'
 
 import Container from 'components/Container'
 
-const About = () => {
+const About = ({img}) => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -72,7 +70,7 @@ const About = () => {
           component={'img'}
           loading="lazy"
           alt="2022 Napa Valley Composite Cycling Team lined up with mountain bikes in front of the Big Barn at Skyline Park."
-          src={teamImg}
+          src={img}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}

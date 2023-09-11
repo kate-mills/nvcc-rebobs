@@ -68,7 +68,7 @@ const About = ({img}) => {
       >
         <Box
           component={'img'}
-          loading="lazy"
+          loading="eager"
           alt="2022 Napa Valley Composite Cycling Team lined up with mountain bikes in front of the Big Barn at Skyline Park."
           src={img}
           height={{ xs: 'auto', md: 1 }}

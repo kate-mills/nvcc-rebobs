@@ -16,7 +16,7 @@ const SidebarNav = () => {
           width={115}
           height={95}
         >
-          <Box component={'img'} src={logoImg} height={1} width={1} />
+          <Box component={'img'} src={logoImg} height={95} width={115} />
         </Box>
       </Box>
       <Box paddingX={2} paddingY={2}>

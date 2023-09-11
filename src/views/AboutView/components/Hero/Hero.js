@@ -57,7 +57,7 @@ const Hero = () => {
       >
         <Box
           component={'img'}
-          loading="lazy"
+          loading="eager"
           src={heroImg}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}

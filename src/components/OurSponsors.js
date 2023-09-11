@@ -15,35 +15,40 @@ import theHub from 'images/sponsors/the-hub.webp'
 import skyline from 'images/sponsors/skyline.webp'
 
 const mock = [
-  { src: ibew, title: 'IBEW, Electricians of Napa & Solono Counties', width: 90, href: 'https://www.ibewlu180.org/' },
+  { src: ibew, title: 'IBEW, Electricians of Napa & Solono Counties', width: 90,height: 107.828, href: 'https://www.ibewlu180.org/' },
   {
     src: theHub,
     title: 'The Hub Napa',
     width: 170,
+    height: 68,
     href: 'https://www.thehubnapa.com/',
   },
   {
     src: bike,
     title: 'Napa County Bicycle Coalition',
     width: 150,
+    height: 43.063,
     href: 'https://napabike.org/',
   },
   {
     src: skyline,
     title: 'Skyline Park',
     width: 120,
+    height: 52.859,
     href: 'https://www.skylinepark.org/',
   },
   {
     src: redwood,
     title: 'Redwood Trails Alliance',
     width: 120,
+    height: 51.422,
     href: 'https://trailsalliance.org/',
   },
   {
     src: valero,
     title: 'Valero Benicia Refinery',
     width: 120,
+    height: 25.469,
     href: 'https://www.valero.com/about/locations/benicia-refinery',
   },
 ]
@@ -75,6 +80,8 @@ const OurSponsors = () => {
             >
               {mock.map((item, i) => (
                 <Box
+                  width={item.width}
+                  height={item.height}
                   maxWidth={item.width}
                   marginTop={2}
                   marginRight={4}

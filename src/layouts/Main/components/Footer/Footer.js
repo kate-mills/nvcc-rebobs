@@ -32,8 +32,9 @@ const Footer = () => {
       <Grid item xs={12}>
         <Typography
           align={'center'}
-          variant={'subtitle2'}
+          component={'p'}
           color="text.secondary"
+          variant={'subtitle2'}
           gutterBottom
         >
           &copy; {new Date().getFullYear()} NAPA VALLEY COMPOSITE CYCLING

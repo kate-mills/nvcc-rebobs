@@ -24,7 +24,7 @@ const About = ({img}) => {
         </Typography>
       </Box>
       <Box marginBottom={4}>
-        <Typography variant="h6" color="text.secondary" gutterBottom>
+        <Typography component={'p'} variant="h6" color="text.secondary" gutterBottom>
           Join the Napa Valley Composite Cycling Team
         </Typography>
         <Typography component="p">

@@ -25,7 +25,7 @@ const Footer = () => {
               target="blank"
               title="Go to Instagram.com"
               size="med"
-              disabled="true"
+              disabled={true}
             >
               <Typography variant="caption">Coming Soon</Typography>
               <InstaIcon sx={{ml: 1}}/>

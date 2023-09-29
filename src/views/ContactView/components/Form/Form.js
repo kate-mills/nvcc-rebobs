@@ -11,8 +11,6 @@ import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 
-import joinUs from 'images/join-us-flyer.webp'
-
 import { handleSubmitContactForm } from 'utils/conditional-form-helper'
 
 const activityOptions = ['Volunteer', 'Join', 'Sponsor', 'Donate', 'Other']
@@ -60,7 +58,6 @@ const validationSchema = yup.object({
 const ContactForm = () => {
   const theme = useTheme()
   const [formState, setFormState] = useState('')
-  const [success, setSuccess] = useState(null)
 
   const GridItemFormBlock = () => {
     const initialValues = {
@@ -78,14 +75,13 @@ const ContactForm = () => {
         try {
           setFormState('init')
           actions.setSubmitting(true)
-          handleSubmitContactForm(values, { ...actions })
+          handleSubmitContactForm(values, { ...actions})
         } catch (err) {
           setFormState(
             'We apologize, but there seems to be an issue. Please try again later.'
           )
           console.log(err)
         } finally {
-          setSuccess(true)
           setFormState(
             `Thank you, ${values.fullName}! One of our coaches will be in touch shortly.`
           )
@@ -95,7 +91,8 @@ const ContactForm = () => {
 
     const isDisabled =
       !formik.values.fullName || !formik.values.email || !formik.values.interest
-    return !success ? (
+
+    return (
       <Box padding={{ xs: 3, sm: 6 }} width={1} component={Card} boxShadow={1}>
         <form
           onSubmit={event => {
@@ -268,8 +265,6 @@ const ContactForm = () => {
           </Box>
         </form>
       </Box>
-    ) : (
-      <Box component={'img'} src={joinUs}></Box>
     )
   }
 

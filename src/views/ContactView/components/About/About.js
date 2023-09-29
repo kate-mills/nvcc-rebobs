@@ -7,17 +7,18 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
 import GatsbyLink from 'components/Link'
+import teamImg from 'images/flyer.webp'
 
 import Container from 'components/Container'
 
-const About = ({img}) => {
+const About = () => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   })
 
   const LeftSide = () => (
-    <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
+    <Box data-aos={isMd ? 'fade-right' : 'fade-up'} minHeight={{xs:426.22,  md:342.234 }}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
           Opportunities for Everyone 
@@ -62,15 +63,14 @@ const About = ({img}) => {
         sx={{
           height: { xs: 'auto', md: 1 },
           '& img': {
-            objectFit: 'cover',
+            objectFit: 'contain',
           },
         }}
       >
         <Box
           component={'img'}
-          loading="eager"
           alt="2022 Napa Valley Composite Cycling Team lined up with mountain bikes in front of the Big Barn at Skyline Park."
-          src={img}
+          src={teamImg}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}

@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import GatsbyLink from 'components/Link'
-import Logo from 'images/rebob.webp'
+import Logo from 'images/rebob-logo.webp'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 const Topbar = ({
@@ -40,7 +40,7 @@ const Topbar = ({
           src={Logo}
           alt="Rebobs Logo"
           width={115}
-          height={95}
+          height={1}
         />
       </Box>
 

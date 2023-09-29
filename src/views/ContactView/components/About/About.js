@@ -18,7 +18,7 @@ const About = () => {
   })
 
   const LeftSide = () => (
-    <Box data-aos={isMd ? 'fade-right' : 'fade-up'} minHeight={{xs:426.22,  md:342.234 }}>
+    <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
           Opportunities for Everyone 

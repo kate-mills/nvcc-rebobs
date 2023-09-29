@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
+import bgImg from 'images/team2023.jpg'
 
 
 import ContactForm from '../Form'
@@ -12,7 +13,7 @@ import Container from 'components/Container'
 
 
 
-const Hero = ({bgImg}) => {
+const Hero = () => {
   const theme = useTheme()
 
   const GridItemHeadlineBlock = () => (

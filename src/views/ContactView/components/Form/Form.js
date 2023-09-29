@@ -9,6 +9,7 @@ import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
 import Divider from '@mui/material/Divider'
 import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
 import { useTheme } from '@mui/material/styles'
 
 import joinUs from 'images/join-us-flyer.webp'
@@ -269,7 +270,15 @@ const ContactForm = () => {
         </form>
       </Box>
     ) : (
-      <Box component={'img'} src={joinUs}></Box>
+      <Container position={'relative'} zIndex={2}>
+        <Box
+          height="auto"
+          component="img"
+          src={joinUs}
+          maxWidth={536}
+          width={1}
+        ></Box>
+      </Container>
     )
   }
 

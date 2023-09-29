@@ -17,14 +17,18 @@ const Footer = () => {
         >
           <Box marginTop={1}>
             <Fab
+              variant="extended"
               color="secondary"
               sx={{ boxShadow: 'none' }}
               component={'a'}
               href="https://www.instagram.com/napavalleycomposite/"
               target="blank"
               title="Go to Instagram.com"
+              size="med"
+              disabled="true"
             >
-              <InstaIcon />
+              <Typography variant="caption">Coming Soon</Typography>
+              <InstaIcon sx={{ml: 1}}/>
             </Fab>
           </Box>
         </Box>

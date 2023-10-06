@@ -12,10 +12,12 @@ const Footer = () => {
         <Box
           display={'flex'}
           alignItems={'center'}
+          justifyContent={'center'}
           width={1}
+          marginY={1}
           flexDirection={{ xs: 'column', sm: 'row' }}
         >
-          <Box marginTop={1}>
+          <Box>
             <Fab
               variant="extended"
               color="secondary"
@@ -24,12 +26,12 @@ const Footer = () => {
               href="https://www.instagram.com/napavalleycomposite/"
               target="blank"
               title="Go to Instagram.com"
-              size="med"
+              size="medium"
               disabled={true}
             >
-              <Typography variant="caption">Coming Soon</Typography>
-              <InstaIcon sx={{ml: 1}}/>
-            </Fab>
+              <Typography variant="caption">Coming Soon</Typography>{' '}
+              <InstaIcon sx={{ ml: 1 }} />{' '}
+            </Fab>{' '}
           </Box>
         </Box>
       </Grid>
@@ -48,6 +50,7 @@ const Footer = () => {
           variant={'caption'}
           color="text.secondary"
           component={'p'}
+          paddingBottom={{xs: '32px', md: '0', lg: '0'}}
         >
           MOUNTAIN BIKE RACING AND RIDING FOR ALL!!
         </Typography>

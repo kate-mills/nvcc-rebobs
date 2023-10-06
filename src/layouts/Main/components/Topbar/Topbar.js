@@ -16,7 +16,7 @@ const Topbar = ({
 }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 75,
+    threshold: 2,
   })
 
   return (
@@ -26,21 +26,22 @@ const Topbar = ({
       alignItems={'center'}
       width={1}
       height={1}
+      backgroundColor= {trigger ? 'common.white':'transparent'}
     >
       <Box
         display={'flex'}
         component={GatsbyLink}
         to="/"
         title="Napa Valley Composite Cycling Team"
-        width={115}
-        height={95}
+        width={70}
+        height={70}
       >
         <Box
           component={'img'}
           src={Logo}
           alt="Rebobs Logo"
-          width={115}
-          height={1}
+          width={"70"}
+          height={"70"}
         />
       </Box>
 
@@ -48,16 +49,7 @@ const Topbar = ({
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
         <Box component={GatsbyLink} to={'/about/'} color={'inherit'} marginRight={2}>About</Box>
         <Box component={GatsbyLink} to={'/team/'} color={'inherit'} marginRight={2}>Team</Box>
-        <Box>
-          <Button
-            variant="contained"
-            color="primary"
-            component={GatsbyLink}
-            to="/contact/"
-            size="large"
-          >Contact
-          </Button>
-        </Box>
+        <Box component={GatsbyLink} to={'/contact/'} color={'inherit'} marginRight={2}>Contact</Box>
       </Box>
 
       {/* SIDEBAR TOGGLER MENU */}

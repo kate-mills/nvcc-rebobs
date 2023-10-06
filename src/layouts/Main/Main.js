@@ -51,7 +51,7 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent', isDarkHer
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 75 
+    threshold: 2 
   })
 
   return (
@@ -60,12 +60,11 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent', isDarkHer
         position={'sticky'}
         sx={{
           top: 0,
-            backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
-            color:(trigger || !isDarkHero) 
-            ? 'common.black'
-            : 'common.white'
-        }}
-        elevation={trigger ? 1 : 0}>
+            boxShadow: 'none',
+            backgroundColor: trigger ? theme.palette.background.paper :'transparent',
+            color: trigger ? '#0d0d0db0' : isDarkHero ? 'common.white': 'common.black',
+            borderBottom: !isDarkHero ? trigger ? 'none': '0.5px solid  #e0e0e0' : 'none',
+        }}>
         <Container paddingY={'2px !important'}>
           <Topbar onSidebarOpen={handleSidebarOpen} pages={pages} colorInvert={trigger ? false : colorInvert} isDarkHero={isDarkHero}/>
         </Container>

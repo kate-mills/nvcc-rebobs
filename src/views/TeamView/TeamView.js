@@ -11,7 +11,7 @@ const TeamView = () => {
   const theme = useTheme();
   return (
     <Main colorInvert={true} isDark={false}>
-    <Container marginTop={{xs: -3, sm: -8, md: -10}}>
+    <Container marginTop={{xs: -4, sm: -4, md:-4 }}>
     <Login/>
     </Container>
       <Container>

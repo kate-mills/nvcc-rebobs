@@ -40,8 +40,9 @@ const Topbar = ({
           component={'img'}
           src={Logo}
           alt="Rebobs Logo"
-          width={"70"}
-          height={"70"}
+          width={70}
+          height={70}
+          sx={{position: 'relative', top: '3px'}}
         />
       </Box>
 

@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 
 import Container from 'components/Container'
 
-import ibew from 'images/sponsors/ibew.webp'
+import ibew from 'images/sponsors/ibew-logo.webp'
 import redwood from 'images/sponsors/redwood.webp'
 import valero from 'images/sponsors/valero.webp'
 import bike from 'images/sponsors/bike-coalition.webp'
@@ -15,7 +15,7 @@ import theHub from 'images/sponsors/the-hub.webp'
 import skyline from 'images/sponsors/skyline.webp'
 
 const mock = [
-  { src: ibew, title: 'IBEW, Electricians of Napa & Solono Counties', width: 90,height: 107.828, href: 'https://www.ibewlu180.org/' },
+  { src: ibew, title: 'IBEW, Electricians of Napa & Solono Counties', width: 100,height: 107.625, href: 'https://www.ibewlu180.org/' },
   {
     src: theHub,
     title: 'The Hub Napa',
@@ -80,8 +80,6 @@ const OurSponsors = () => {
             >
               {mock.map((item, i) => (
                 <Box
-                  width={item.width}
-                  height={item.height}
                   maxWidth={item.width}
                   marginTop={2}
                   marginRight={4}
@@ -90,10 +88,11 @@ const OurSponsors = () => {
                   <Box component={'a'} href={item.href} target="_blank">
                     <Box
                       component="img"
-                load={'lazy'}
-                      width={1}
+                      load={'lazy'}
+                      width={item.width}
+                      height={item.height}
                       src={item.src}
-                title={item.title}
+                      title={item.title}
                       alt={`${item.title} logo`}
                       sx={{
                         filter:

@@ -15,7 +15,7 @@ export const Head = ({location}) => {
       location={location}
       pageContext={{
       title: 'Team',
-        description: `If you are a middle or high-school student in Napa Valley and love mountain biking, join the Napa Valley Composite Cycling Team affiliated with NICA. Our team welcomes everyone, whether you are a beginner or an experienced racer, to compete against high schools all over California. Students from all Napa middle and high schools can participate. Join us and explore the world of mountain biking!`,
+        description: `Easily access your Rebob team accounts from here. Connect with teammates, stay up-to-date on team news and announcements, and register for upcoming races and events.`,
       }}
     />
   )

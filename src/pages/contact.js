@@ -15,7 +15,8 @@ export const Head = ({location}) => {
       location={location}
       pageContext={{
       title: 'Contact',
-        description: `We're always looking for volunteers, sponsors, coaching help, parent support, friends to ride with, and race support!`,
+        description: `Napa Valley middle and high school students - love mountain biking? Join the NV Composite Cycling Team affiliated with NICA. All skill levels are welcome to compete with high schools across CA.
+          `,
       }}
     />
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Seo = ({ location, params, data, pageContext = {} }) => {
   const baseUrl = `https://nvcc-rebobs.netlify.app/`
-  const canonicalUrl = `https://www.napavalleycompositecycling.com/`
+  const canonicalUrl = `https://www.napavalleycompositecycling.com`
 
   const { title="", description="", image } = pageContext
 

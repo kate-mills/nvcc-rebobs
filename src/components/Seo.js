@@ -4,8 +4,10 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
   const canonicalUrl = `https://www.napavalleycompositecycling.com`
   const { title="", description="", image } = pageContext
 
+  const defaultTitle = `Napa Valley Composite Cycling Team | Napa, CA`
+
   const seo = { 
-    title: `${title} | Napa, CA | Napa Valley Composite Cycling Team`,
+    title: ((!title) ? defaultTitle : `${title} | ${defaultTitle}`),
     img: image || `${canonicalUrl}team-photo.webp`,
     canonical: `${canonicalUrl}${location.pathname}`,
     description:

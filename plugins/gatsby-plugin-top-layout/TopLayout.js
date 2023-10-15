@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Page from '../../src/components/Page'
 
 import 'aos/dist/aos.css'
-import '@fontsource/inter'
+import '@fontsource-variable/inter-tight';
 
 export default function TopLayout(props) {
   return (

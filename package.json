@@ -16,7 +16,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/server": "latest",
     "@emotion/styled": "^11.11.0",
-    "@fontsource/inter": "^5.0.8",
+    "@fontsource-variable/inter-tight": "^5.0.16",
     "@mui/icons-material": "^5.14.7",
     "@mui/material": "^5.14.7",
     "aos": "^2.3.4",

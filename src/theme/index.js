@@ -17,7 +17,7 @@ const getTheme = (mode = 'light', themeToggler) =>
       palette: mode === 'light' ? light : dark,
       shadows: shadows(mode),
       typography: {
-        fontFamily: '"Inter", sans-serif',
+        fontFamily: '"Inter Tight Variable", sans-serif',
         button: {
           textTransform: 'none',
           fontWeight: 'medium',

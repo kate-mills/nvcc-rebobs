@@ -6,12 +6,8 @@ import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 import bgImg from 'images/team2023.jpg'
 
-
 import ContactForm from '../Form'
-
 import Container from 'components/Container'
-
-
 
 const Hero = () => {
   const theme = useTheme()
@@ -19,12 +15,10 @@ const Hero = () => {
   const GridItemHeadlineBlock = () => (
     <Box marginBottom={4} data-aos="fade-up">
       <Typography
+        component="h1"
         variant="h3"
         gutterBottom
-        sx={{
-          fontWeight: 900,
-          color: 'common.white',
-        }}
+        sx={{ fontWeight: 700, color: 'common.white' }}
       >
         Napa Valley Composite Cycling Team
       </Typography>
@@ -37,9 +31,7 @@ const Hero = () => {
           color: 'common.white',
         }}
       >
-        Whether you are a beginner, or have been racing before, our team would
-        love to have you join us as we compete against highschools from around
-        California.
+   The Rebobs (Napa Valley Composite Cycling Team) is a NICA-affiliated mountain bike team offering middle and high school students (6-12 grades) an exciting opportunity to participate in bike racing. Whether you are new to mountain bike riding or have prior experience in racing, our team welcomes you to join us as we compete with high schools across California.
       </Typography>
     </Box>
   )
@@ -82,8 +74,7 @@ const Hero = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box width={1} height="100%" display="flex" alignItems="center">
-    <ContactForm/>
-
+              <ContactForm />
             </Box>
           </Grid>
         </Grid>

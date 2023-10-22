@@ -21,20 +21,24 @@ const About = () => {
     <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
-          Opportunities for Everyone 
+          Opportunities for everyone
         </Typography>
       </Box>
       <Box marginBottom={4}>
-        <Typography component={'p'} variant="h6" color="text.secondary" gutterBottom>
-          Join the Napa Valley Composite Cycling Team
+        <Typography
+          component={'p'}
+          variant="h6"
+          color="text.secondary"
+          gutterBottom
+        >
+          The Rebobs welcome all Napa students (6-12 grade)
         </Typography>
-        <Typography component="p">
-          The Napa Valley Composite Cycling Team is a NICA-affiliated mountain
-          bike team offering middle and high school students (6-12 grades) an
-          exciting opportunity to participate in bike racing. Whether you are
-          new to mountain bike riding or have prior experience in racing, our
-          team welcomes you to join us as we compete with high schools across
-          California.
+        <Typography component="p" gutterBottom>
+          We are a NICA-affiliated team that follows strict safety and ethical
+          standards on and off the trails. We offer our riders high-quality
+          training, support, and racing opportunities throughout the season. Our
+          team also participates in community service projects and other events
+          that promote cycling and give back to the community.
         </Typography>
       </Box>
       <Box
@@ -44,14 +48,13 @@ const About = () => {
         to={'/about/'}
         component={GatsbyLink}
       >
-        {' '}
         <Button
           variant="contained"
           color="primary"
           size="large"
           fullWidth={isMd ? false : true}
         >
-          About us
+          Learn more
         </Button>
       </Box>
     </Box>

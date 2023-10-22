@@ -20,7 +20,7 @@ const Hero = () => {
         gutterBottom
         sx={{ fontWeight: 700, color: 'common.white' }}
       >
-        Napa Valley Composite Cycling Team
+        Napa Valley Composite Cycling Team / Rebobs
       </Typography>
       <Typography
         variant="h6"
@@ -31,7 +31,7 @@ const Hero = () => {
           color: 'common.white',
         }}
       >
-   The Rebobs (Napa Valley Composite Cycling Team) is a NICA-affiliated mountain bike team offering middle and high school students (6-12 grades) an exciting opportunity to participate in bike racing. Whether you are new to mountain bike riding or have prior experience in racing, our team welcomes you to join us as we compete with high schools across California.
+The Rebobs, a Napa Valley Composite Cycling Team, is a NICA-affiliated, 6-12 grade MTB team that competes against high schools from all over California. Whether you're a beginner or an experienced racer, we'd love to have you on our team. Students from all Napa middle and high schools are welcome to join us!
       </Typography>
     </Box>
   )

@@ -27,7 +27,7 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
       <meta property="og:description" content={seo.description} />
 
       <meta name="og:locale" content="en_US" />
-      <meta name="og:site_name" content="Napa Valley Composite" />
+      <meta name="og:site_name" content="Napa Valley Composite Cycling Team" />
 
       <meta name="fb_admins_meta_tag" content="napavalleycompositecycling" />
       <meta name="keywords" content="Cycling, MTB, NICA" />

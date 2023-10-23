@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Seo = ({ location, params, data, pageContext = {} }) => {
+const Seo = ({ location, params, data, pageContext = {}, children}) => {
   const canonicalUrl = `https://www.napavalleycompositecycling.com`
   const { title="", description="", image } = pageContext
 
-  const defaultTitle = `Napa Valley Composite Cycling Team | Napa, CA`
+  const defaultTitle = `Napa Valley Composite Cycling`
 
   const seo = { 
     title: ((!title) ? defaultTitle : `${title} | ${defaultTitle}`),
@@ -14,12 +14,10 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
       description ||
       'Napa Valley Composite Cycling Team is a NICA affiliated, high-school age MTB team. Whether you are a beginner, or have been racing before, our team would love to have you join us as we compete against highschools from around California. Students from ALL Napa High Schools are welcome to join!',
   }
-
   return (
     <>
       <meta name="description" content={seo.description} />
       <title>{seo.title}</title>
-
       <meta property="og:title" content={seo.title} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={seo.img} />
@@ -38,6 +36,7 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <link rel="canonical" href={seo.canonical}/>
+    {children}
     </>
   )
 }

@@ -52,6 +52,7 @@ const Topbar = ({
         <Box component={GatsbyLink} to={'/about/'} color={'inherit'} marginRight={2}>About</Box>
         <Box component={GatsbyLink} to={'/team/'} color={'inherit'} marginRight={2}>Team</Box>
         <Box component={GatsbyLink} to={'/contact/'} color={'inherit'} marginRight={2}>Contact</Box>
+        <Box component={GatsbyLink} to={'/faq/'} color={'inherit'} marginRight={2}>FAQ</Box>
       </Box>
 
       {/* SIDEBAR TOGGLER MENU */}

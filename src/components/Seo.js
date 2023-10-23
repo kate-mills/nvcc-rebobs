@@ -8,7 +8,7 @@ const Seo = ({ location, params, data, pageContext = {} }) => {
 
   const seo = { 
     title: ((!title) ? defaultTitle : `${title} | ${defaultTitle}`),
-    img: image || `${canonicalUrl}team-photo.webp`,
+    img: image || `${canonicalUrl}/team-photo.webp`,
     canonical: `${canonicalUrl}${location.pathname}`,
     description:
       description ||

@@ -35,6 +35,7 @@ const Topbar = ({
         title="Napa Valley Composite Cycling Team"
         width={70}
         height={70}
+        my={'3px'}
       >
         <Box
           component={'img'}

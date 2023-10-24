@@ -11,7 +11,6 @@ const AboutPage = () => {
 export default AboutPage
 
 export const Head = ({location}) => {
-  console.log('location', location)
   return (
     <Seo
       location={location}

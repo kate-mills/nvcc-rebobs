@@ -72,7 +72,7 @@ const About = () => {
       >
         <Box
           component={'img'}
-          alt="The 2022 Napa Valley Composite Cycling, Rebobs Team lined up with mountain bikes in front of the Big Barn at Skyline Park."
+          alt="The 2022 Napa Valley Composite Cycling Team (The Rebobs) lined up with mountain bikes in front of the Big Barn at Skyline Park."
           src={teamImg}
           paddingY={1}
           height={{ xs: 'auto', md: 1 }}

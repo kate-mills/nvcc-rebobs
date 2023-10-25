@@ -5,14 +5,13 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
-import Avatar from '@mui/material/Avatar'
 
 import Chip from '@mui/material/Chip'
 import Stack from '@mui/material/Stack'
 
 import GatsbyLink from 'components/Link'
-import teamImg from 'images/team2023.webp'
-import rebobLogo from 'images/rebob-logo.webp'
+import rebobLogo from 'images/CAW-CAW.svg'
+
 
 import Container from 'components/Container'
 
@@ -91,37 +90,20 @@ const NextEvent = () => {
         sx={{
           height: { xs: 'auto', md: 1 },
           '& img': {
-            objectFit: 'cover',
+            objectFit: 'contain',
           },
         }}
       >
-        {/*
         <Box
           component={'img'}
-          alt="The 2022 Napa Valley Composite Cycling Team (The Rebobs) lined up with mountain bikes in front of the Big Barn at Skyline Park."
-          src={teamImg}
+          alt={`Rebob Team Logo with background text that says, "CAW CAW."`}
+          src={rebobLogo}
           paddingY={1}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}
           maxWidth={1}
         />
-        */}
-        <Box
-          backgroundColor={'#aa1f2e'}
-          maxWidth={1}
-          height={1}
-          my={0}
-          minHeight={{ xs: 100, md: 300 }}
-        >
-          <Box width={'100px'} minHeight={'10%'} />
-          <Stack direction="row" spacing={1} justifyContent={'center'}>
-            <Avatar
-              src={rebobLogo}
-              sx={{ width: 300, height: 300, borderRadius: 'unset' }}
-            />
-          </Stack>
-        </Box>
       </Box>
     )
   }

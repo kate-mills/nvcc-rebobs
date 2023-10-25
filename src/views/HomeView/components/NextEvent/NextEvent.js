@@ -25,7 +25,7 @@ const NextEvent = () => {
     <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
-          Bay Area Ridge Trail Work Party
+Attention to all Rebobs
         </Typography>
       </Box>
       <Box marginBottom={4}>
@@ -34,12 +34,10 @@ const NextEvent = () => {
           variant="h6"
           color={'text.secondary'}
           gutterBottom
-        >
-          Saturday, Nov 4th from 9:30 AM to 12:30 PM
+        >We are scheduling team events now!
         </Typography>
         <Typography component="p" gutterBottom>
-          Meet at Skyline Barn. Burrito lunch to follow. There is no cost yet.
-          Bay Area Ridge Trail is asking for and appreciates $10 donation.
+We have limited-availability team events that require registration on TeamSnap. Check your TeamSnap account for the complete list.
         </Typography>
         <Stack
           direction="row"
@@ -48,26 +46,23 @@ const NextEvent = () => {
           marginTop={2}
           marginBottom={4}
         >
-          <Chip label="Registration Required" variant={'outlined'} />
-          <Chip label="Limited Availability" variant="outlined" />
+          <Chip label="Some Events Require Registration" variant={'outlined'} />
         </Stack>
       </Box>
       <Box
         display="flex"
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-      >
-        <Button
+      ><Button
           variant="contained"
           color="primary"
           size="large"
           fullWidth={isMd ? false : true}
           href="https://go.teamsnap.com/6726246/home"
           component={'a'}
-          title="Register now on TeamSnap"
+          title="Go to TeamSnap"
           sx={{ display: 'inline-block', textAlign: 'center', marginBottom: 2 }}
-        >
-          Register on TeamSnap
+        >Check TeamSnap
         </Button>
         <Button
           variant="outlined"
@@ -98,7 +93,6 @@ const NextEvent = () => {
           component={'img'}
           alt={`Rebob Team Logo with background text that says, "CAW CAW."`}
           src={rebobLogo}
-          paddingY={1}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}

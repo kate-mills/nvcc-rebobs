@@ -92,6 +92,7 @@ We have limited-availability team events that require registration on TeamSnap. 
         <Box
           component={'img'}
           alt={`Rebob Team Logo with background text that says, "CAW CAW."`}
+          load={'lazy'}
           src={rebobLogo}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}

@@ -78,9 +78,7 @@ const OurSponsors = () => {
               Proudly Sponsored By
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
-              Thanks to our local sponsors for their generous support,
-              <br />
-              we can make this program possible.
+              Our team is incredibly thankful for the support of our community sponsors.
             </Typography>
           </Box>
         </Grid>

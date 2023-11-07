@@ -7,15 +7,50 @@ import Typography from '@mui/material/Typography'
 
 import Container from 'components/Container'
 
-import ibew from 'images/sponsors/ibew-logo.webp'
+import ibew from 'images/sponsors/ibew.webp'
+import napaBikeCoalition from 'images/sponsors/napa-bike-coalition.webp'
+import napaBikeShop from 'images/sponsors/napa-bike-shop.webp'
 import redwood from 'images/sponsors/redwood.webp'
-import valero from 'images/sponsors/valero.webp'
-import bike from 'images/sponsors/bike-coalition.webp'
+import skylinePark from 'images/sponsors/skyline-park.webp'
 import theHub from 'images/sponsors/the-hub.webp'
-import skyline from 'images/sponsors/skyline.webp'
+import valero from 'images/sponsors/valero.webp'
 
 const mock = [
-  { src: ibew, title: 'IBEW, Electricians of Napa & Solono Counties', width: 100,height: 107.625, href: 'https://www.ibewlu180.org/' },
+  {
+    src: napaBikeShop,
+    title: 'Napa Valley Bike Shop',
+    width: 80,
+    height: 87,
+    href: 'https://www.napavalleybikeshop.com/',
+  },
+  {
+    src: ibew,
+    title: 'IBEW, Electricians of Napa & Solono Counties',
+    width: 68,
+    height: 86,
+    href: 'https://www.ibewlu180.org/',
+  },
+  {
+    src: valero,
+    title: 'Valero Benicia Refinery',
+    width: 139,
+    height: 30,
+    href: 'https://www.valero.com/about/locations/benicia-refinery',
+  },
+  {
+    src: napaBikeCoalition,
+    title: 'Napa County Bicycle Coalition',
+    width: 112,
+    height: 50,
+    href: 'https://napabike.org/',
+  },
+  {
+    src: skylinePark,
+    title: 'Skyline Park',
+    width: 97.36,
+    height: 40,
+    href: 'https://www.skylinepark.org/',
+  },
   {
     src: theHub,
     title: 'The Hub Napa',
@@ -24,32 +59,11 @@ const mock = [
     href: 'https://www.thehubnapa.com/',
   },
   {
-    src: bike,
-    title: 'Napa County Bicycle Coalition',
-    width: 150,
-    height: 43.063,
-    href: 'https://napabike.org/',
-  },
-  {
-    src: skyline,
-    title: 'Skyline Park',
-    width: 120,
-    height: 52.859,
-    href: 'https://www.skylinepark.org/',
-  },
-  {
     src: redwood,
     title: 'Redwood Trails Alliance',
     width: 120,
     height: 51.422,
     href: 'https://trailsalliance.org/',
-  },
-  {
-    src: valero,
-    title: 'Valero Benicia Refinery',
-    width: 120,
-    height: 25.469,
-    href: 'https://www.valero.com/about/locations/benicia-refinery',
   },
 ]
 
@@ -75,7 +89,7 @@ const OurSponsors = () => {
             <Box
               display="flex"
               flexWrap="wrap"
-              justifyContent={'space-around'}
+              justifyContent={{ xs: 'space-around', lg: 'space-between' }}
               alignItems={'center'}
             >
               {mock.map((item, i) => (
@@ -112,4 +126,4 @@ const OurSponsors = () => {
   )
 }
 
-export default OurSponsors 
+export default OurSponsors

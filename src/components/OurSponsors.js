@@ -100,6 +100,7 @@ const OurSponsors = () => {
                     <Box
                       component="img"
                       load={'lazy'}
+                      width={item.width}
                       height={item.height}
                       src={item.src}
                       title={item.title}

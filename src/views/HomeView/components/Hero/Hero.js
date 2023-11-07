@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 import bgImg from 'images/team2023.webp'
 
-import ContactForm from '../Form'
+import ContactForm from 'components/ContactForm'
 import Container from 'components/Container'
 
 const Hero = () => {

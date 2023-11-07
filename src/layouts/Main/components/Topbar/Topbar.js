@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import GatsbyLink from 'components/Link'
-import Logo from 'images/rebob-logo.webp'
+import Logo from 'images/rebob.webp'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 const Topbar = ({
@@ -33,16 +33,16 @@ const Topbar = ({
         component={GatsbyLink}
         to="/"
         title="Napa Valley Composite Cycling Team"
-        width={70}
-        height={70}
+        width={103}
+        height={85}
         my={'3px'}
       >
         <Box
           component={'img'}
           src={Logo}
           alt="Rebobs Logo"
-          width={70}
-          height={70}
+          width={103}
+          height={85}
           sx={{position: 'relative', top: '3px'}}
         />
       </Box>

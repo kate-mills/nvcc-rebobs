@@ -1,6 +1,6 @@
 const commonQuestions = [
   {
-    title: 'The Basics',
+    title: 'Basics',
     items: [
       {
         question: `Who are the Rebobs?`,
@@ -49,7 +49,5 @@ const commonQuestionsJsonLd={
   }),
   ]
 }
-
-
 
 export { commonQuestions, commonQuestionsJsonLd }

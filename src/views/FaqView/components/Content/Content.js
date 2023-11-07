@@ -13,8 +13,8 @@ const FaqGroupItem = ({ title, items }) => {
   const theme = useTheme()
   return (
     <Box>
-      <Box marginBottom={2}>
-        <Typography fontWeight={700} variant={'h5'}>
+      <Box marginBottom={3}>
+        <Typography fontWeight={600} variant={'h5'} component={'p'}>
           {title}
         </Typography>
       </Box>

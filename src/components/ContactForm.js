@@ -41,7 +41,7 @@ const validationSchema = yup.object({
   referralSrc: yup
     .string()
     .trim()
-    .min(2, 'Please enter a valid referral source (min 20 chars).')
+    .min(2, 'Please enter a valid referral source (min 2 chars).')
     .max(50, 'Please enter a valid referral source (max 50 chars).')
     .required('Referral source is required.'),
   interest: yup

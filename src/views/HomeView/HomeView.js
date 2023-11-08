@@ -3,14 +3,14 @@ import Box from '@mui/material/Box'
 
 import Main from 'layouts/Main'
 
-import { Hero, NextEvent } from './components'
+import { Hero, Attention } from './components'
 
 const HomeView = () => {
   return (
     <Main isDarkHero={true}>
       <Hero/>
     <Box>
-      <NextEvent/>
+      <Attention/>
     </Box>
     </Main>
   )

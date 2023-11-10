@@ -28,10 +28,20 @@ const SidebarNav = () => {
             fullWidth
             component={GatsbyLink}
             to="/team/"
-          >
-            Team{' '}
-          </Button>{' '}
+          > Team </Button>
         </Box>
+
+        <Box marginTop={1}>
+          <Button
+            size={'large'}
+            variant="link"
+            color="primary"
+            fullWidth
+            component={GatsbyLink}
+            to="/about/"
+          > About </Button>
+        </Box>
+
         <Box></Box>
         <Box marginTop={2}>
           <Button
@@ -40,9 +50,8 @@ const SidebarNav = () => {
             variant="outlined"
             fullWidth
             component={GatsbyLink}
-            to={'/about'}
-          >
-            About
+            to={'/faq/'}
+          >FAQ
           </Button>
         </Box>
         <Box marginTop={1}>
@@ -53,7 +62,7 @@ const SidebarNav = () => {
             fullWidth
             component={GatsbyLink}
             target="blank"
-            to={'/contact'}
+            to={'/contact/'}
           >
             Contact
           </Button>

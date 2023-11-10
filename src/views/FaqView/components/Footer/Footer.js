@@ -66,9 +66,7 @@ const Footer = () => {
           color="primary"
           size="large"
           fullWidth={!isMd}
-          marginTop={{ xs: 1, sm: 0 }}
-          marginLeft={{ sm: 2 }}
-        ><GatsbyLink to="/contact">Ask a question</GatsbyLink>
+        ><GatsbyLink to="/contact">Contact us</GatsbyLink>
         </Box>
       </Box>
     </Box>

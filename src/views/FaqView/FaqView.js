@@ -4,7 +4,8 @@ import Box from '@mui/material/Box';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import { Content, Footer, Headline } from './components';
+//import { Content, Footer, Headline } from './components';
+import { Content, Headline } from './components';
 
 const Faq = () => {
   const theme = useTheme();
@@ -28,7 +29,7 @@ const Faq = () => {
         </Container>
         <Box bgcolor={theme.palette.alternate.main}>
           <Container>
-            <Footer />
+    {/*<Footer />*/}
           </Container>
         </Box>
       </Box>

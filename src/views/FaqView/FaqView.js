@@ -27,11 +27,7 @@ const Faq = () => {
         <Container maxWidth={800}>
           <Content />
         </Container>
-        <Box bgcolor={theme.palette.alternate.main}>
-          <Container>
-    {/*<Footer />*/}
-          </Container>
-        </Box>
+    {/*<Box bgcolor={theme.palette.alternate.main}><Container><Footer /></Container></Box>*/}
       </Box>
     </Main>
   );

@@ -6,12 +6,16 @@ import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 
+import Chip from '@mui/material/Chip'
+import Stack from '@mui/material/Stack'
+
 import GatsbyLink from 'components/Link'
-import teamImg from 'images/team2023.webp'
+import rebobLogo from 'images/CAW-CAW.svg'
+
 
 import Container from 'components/Container'
 
-const About = () => {
+const Attention = () => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -21,40 +25,55 @@ const About = () => {
     <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
       <Box marginBottom={2}>
         <Typography variant="h4" color="text.primary" sx={{ fontWeight: 700 }}>
-          Opportunities for everyone
+Attention to all Rebobs
         </Typography>
       </Box>
       <Box marginBottom={4}>
         <Typography
           component={'p'}
           variant="h6"
-          color="text.secondary"
+          color={'text.secondary'}
           gutterBottom
-        >
-          The Rebobs welcome all Napa students (6-12 grade)
+        >We are scheduling team events now!
         </Typography>
         <Typography component="p" gutterBottom>
-          We are a NICA-affiliated team that follows strict safety and ethical
-          standards on and off the trails. We offer our riders high-quality
-          training, support, and racing opportunities throughout the season. Our
-          team also participates in community service projects and other events
-          that promote cycling and give back to the community.
+We have limited-availability team events that require registration on TeamSnap. Check your TeamSnap account for the complete list.
         </Typography>
+        <Stack
+          direction="row"
+          spacing={1}
+          justifyContent={'flex-start'}
+          marginTop={2}
+          marginBottom={4}
+        >
+          <Chip label="Some Events Require Registration" variant={'outlined'} />
+        </Stack>
       </Box>
       <Box
         display="flex"
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-        to={'/about/'}
-        component={GatsbyLink}
-      >
-        <Button
+      ><Button
           variant="contained"
           color="primary"
           size="large"
           fullWidth={isMd ? false : true}
+          href="https://go.teamsnap.com/6726246/home"
+          component={'a'}
+          title="Go to TeamSnap"
+          sx={{ display: 'inline-block', textAlign: 'center', marginBottom: 2 }}
+        >Check TeamSnap
+        </Button>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="large"
+          fullWidth={isMd ? false : true}
+          to="/contact"
+          component={GatsbyLink}
+          ml={{ sm: 0, md: 1 }}
         >
-          Learn more
+          Contact Us
         </Button>
       </Box>
     </Box>
@@ -66,15 +85,15 @@ const About = () => {
         sx={{
           height: { xs: 'auto', md: 1 },
           '& img': {
-            objectFit: 'cover',
+            objectFit: 'contain',
           },
         }}
       >
         <Box
           component={'img'}
-          alt="The 2022 Napa Valley Composite Cycling, Rebobs Team lined up with mountain bikes in front of the Big Barn at Skyline Park."
-          src={teamImg}
-          paddingY={1}
+          alt={`Rebob Team Logo with background text that says, "CAW CAW."`}
+          load={'lazy'}
+          src={rebobLogo}
           height={{ xs: 'auto', md: 1 }}
           maxHeight={{ xs: 300, md: 1 }}
           width={1}
@@ -145,4 +164,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Attention

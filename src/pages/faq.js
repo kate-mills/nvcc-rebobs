@@ -15,7 +15,7 @@ export const Head = ({location}) => {
     <Seo
       location={location}
       pageContext={{
-      title: 'Frequently Asked Questions (FAQ)',
+      title: 'FAQ',
         description: `The Rebob coaches answer frequently asked questions about the team, practice, competition, community service, and relevant topics.`,
           hideDefaultTitle: true,
       }}

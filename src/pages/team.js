@@ -14,7 +14,7 @@ export const Head = ({location}) => {
     <Seo
       location={location}
       pageContext={{
-      title: 'Team',
+      title: 'Team Apps',
         description: `Easily access your Rebob team accounts from here. Connect with teammates, stay up-to-date on team news and announcements, and register for upcoming races and events.`,
       }}
     />

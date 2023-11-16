@@ -7,7 +7,7 @@ import { Hero, Attention } from './components'
 
 const HomeView = () => {
   return (
-    <Main isDarkHero={true}>
+    <Main>
       <Hero/>
     <Box>
       <Attention/>

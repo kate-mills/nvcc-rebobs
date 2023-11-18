@@ -48,6 +48,7 @@ The Rebobs, a Napa Valley Composite Cycling Team, is a NICA-affiliated, 6-12 gra
         background: `url(${bgImg}) no-repeat center`,
         backgroundPosition: `50% 80%`,
         backgroundSize: 'cover',
+          alt="2022 Napa Valley Composite Cycling Team/ The Rebobs sit on mountain bikes."
       }}
     >
       <Box

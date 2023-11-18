@@ -1,87 +1,118 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
-import { useTheme } from '@mui/material/styles'
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import GatsbyLink from 'components/Link'
+
+
+
+import Container from 'components/Container';
+
 import bgImg from 'images/team2023.webp'
 
-import ContactForm from 'components/ContactForm'
-import Container from 'components/Container'
-
-const Hero = () => {
-  const theme = useTheme()
-
-  const GridItemHeadlineBlock = () => (
-    <Box marginBottom={4} data-aos="fade-up">
-      <Typography
-        component="h1"
-        variant="h3"
-        gutterBottom
-        sx={{ fontWeight: 700, color: 'common.white' }}
-      >
-        Napa Valley Composite Cycling Team / Rebobs
-      </Typography>
-      <Typography
-        variant="h6"
-        component="p"
-        color="text.primary"
-        sx={{
-          fontWeight: 500,
-          color: 'common.white',
-        }}
-      >
-The Rebobs, a Napa Valley Composite Cycling Team, is a NICA-affiliated, 6-12 grade MTB team that competes against high schools from all over California. Whether you're a beginner or an experienced racer, we'd love to have you on our team. Students from all Napa middle and high schools are welcome to join us!
-      </Typography>
-    </Box>
-  )
+const SimpleHeroWithBottomVideo = () => {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
 
   return (
-    <Box
-      minHeight={300}
-      height={'auto'}
-      position={'relative'}
-      alt="2022 Napa Valley Composite Cycling Team/ The Rebobs sit on mountain bikes."
-      sx={{
-        marginTop: -13,
-        paddingTop: 13,
-        backgroundColor: theme.palette.alternate.main,
-        background: `url(${bgImg}) no-repeat center`,
-        backgroundPosition: `50% 80%`,
-        backgroundSize: 'cover',
-      }}
+    <Box>
+      <Container>
+        <Box>
+          <Box marginBottom={2}>
+            <Typography
+              variant="h2"
+              color="text.primary"
+              sx={{
+                fontWeight: 700,
+              }}
+            >Napa Valley Composite Cycling Team / Rebobs
+            </Typography>
+          </Box>
+          <Box marginBottom={3}>
+            <Typography
+              variant="h5"
+              component="p"
+              color="text.secondary"
+              sx={{ fontWeight: 400 }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          width: 1,
-          height: 1,
-          backgroundColor: theme.palette.primary.main,
-          backgroundImage: `linear-gradient(315deg, ${theme.palette.primary.main} 0%, #000000 74%)`,
-          opacity: '0.8',
-          zIndex: 1,
-        }}
-      />
-      <Container position={'relative'} zIndex={2}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Box width={1} height="100%" display="flex" alignItems="center">
-              <GridItemHeadlineBlock />
+Our team is affiliated with NICA and welcomes students from any middle or high school in Napa Valley, grades 6-12. We participate in mountain bike competitions against high schools from all over California. Whether you are a beginner or have prior racing experience, you are welcome to join our team.
+            </Typography>
+          </Box>
+          <Box
+            display="flex"
+            flexDirection={{ xs: 'column', sm: 'row' }}
+            alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+          >
+            <Button
+              component={GatsbyLink}
+              variant="contained"
+              color="primary"
+              size="large"
+              fullWidth={isMd ? false : true}
+              to={'/contact/'}
+            >Contact Us</Button>
+            <Box
+              marginTop={{ xs: 2, sm: 0 }}
+              marginLeft={{ sm: 2 }}
+              width={{ xs: '100%', md: 'auto' }}
+            >
+              <Button
+                component={GatsbyLink}
+                to={'/faq/'}
+                variant="outlined"
+                color="primary"
+                size="large"
+                fullWidth={isMd ? false : true}
+              >
+    Frequently Asked Questions
+              </Button>
             </Box>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box width={1} height="100%" display="flex" alignItems="center">
-              <ContactForm />
-            </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
+      </Container>
+      <Container maxWidth={1} paddingTop={'0 !important'}>
+        <Box
+          sx={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+              '& img': {
+
+              objectPosition: 'left',
+              objectFit:'cover',
+              },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              top: 0,
+              width: 1,
+              height: 1,
+              zIndex: 3,
+              background: theme.palette.primary.main,
+              opacity: 0.2,
+            },
+          }}
+        >
+          <Box
+            component={'img'}
+            maxHeight={500}
+            width={1}
+            src={bgImg}
+            alt="2022 Napa Valley Composite Cycling Team/ The Rebobs sit on mountain bikes."
+          >
+          </Box>
+        </Box>
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Hero
+export default SimpleHeroWithBottomVideo;

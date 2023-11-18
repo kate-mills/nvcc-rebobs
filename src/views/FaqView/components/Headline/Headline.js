@@ -9,7 +9,7 @@ const Headline = () => {
         Have a question?
       </Typography>
       <Typography variant="h6" align={'center'} color={'textSecondary'}>
-        Search our FAQ for answers to common questions.
+Discover answers to commonly asked questions regarding our team, practices, coaches, and other pertinent details.
       </Typography>
     </Box>
   );

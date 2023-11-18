@@ -4,7 +4,7 @@ const Seo = ({ location, params, data, pageContext = {}, children}) => {
   const canonicalUrl = `https://www.napavalleycompositecycling.com`
   const { title="", description="", image } = pageContext
 
-  const defaultTitle = `Napa Valley Composite Cycling Team | Napa, CA`
+  const defaultTitle = `Napa Valley Composite Cycling | Napa, CA`
 
   const seo = {
     title: !title ? defaultTitle : `${title} | ${defaultTitle}`,
@@ -28,6 +28,7 @@ const Seo = ({ location, params, data, pageContext = {}, children}) => {
   ]
   return (
     <>
+      <meta http-equiv='content-language' content='en-US'/>
       <meta name="description" content={seo.description} />
       <title>{seo.title}</title>
 

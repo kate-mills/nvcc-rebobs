@@ -28,7 +28,7 @@ const Seo = ({ location, params, data, pageContext = {}, children}) => {
   ]
   return (
     <>
-      <meta http-equiv='content-language' content='en-US'/>
+      <meta httpEquiv='content-language' content='en-US'/>
       <meta name="description" content={seo.description} />
       <title>{seo.title}</title>
 

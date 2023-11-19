@@ -7,7 +7,7 @@ import AccordionSummary from '@mui/material/AccordionSummary'
 import Typography from '@mui/material/Typography'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import {commonQuestions } from 'utils/common-questions'
+import { commonQuestions } from 'utils/common-questions'
 
 const FaqGroupItem = ({ title, items }) => {
   const theme = useTheme()
@@ -36,7 +36,7 @@ const FaqGroupItem = ({ title, items }) => {
               component={AccordionSummary}
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
-              id={`panel1a-header--${i}`}
+              id={`panel1a-header--${title}--${i}`}
             >
               <Typography fontWeight={600}>{item.question}</Typography>
             </Box>

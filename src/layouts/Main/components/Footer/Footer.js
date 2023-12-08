@@ -23,15 +23,15 @@ const Footer = () => {
               color="secondary"
               sx={{ boxShadow: 'none' }}
               component={'a'}
-              href="https://www.instagram.com/napavalleycomposite/"
+              //href="https://www.instagram.com/rebobs_legacy/"
+              href="https://www.instagram.com/rebobsmtb/"
               target="blank"
               title="Go to Instagram.com"
               size="medium"
-              disabled={true}
             >
-              <Typography variant="caption">Coming Soon</Typography>{' '}
-              <InstaIcon sx={{ ml: 1 }} />{' '}
-            </Fab>{' '}
+              <Typography variant="button">RebobsMTB</Typography>
+              <InstaIcon sx={{ ml: 0.5 }} />
+            </Fab>
           </Box>
         </Box>
       </Grid>

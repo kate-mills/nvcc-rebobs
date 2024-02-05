@@ -1,17 +1,15 @@
 import React from 'react'
-import Box from '@mui/material/Box'
 
 import Main from 'layouts/Main'
+import CoffeeCard from 'components/CoffeeCard'
 
-import { Hero, Attention } from './components'
+import { Hero } from './components'
 
 const HomeView = () => {
   return (
     <Main>
       <Hero/>
-    <Box>
-      <Attention/>
-    </Box>
+    <CoffeeCard/>
     </Main>
   )
 }

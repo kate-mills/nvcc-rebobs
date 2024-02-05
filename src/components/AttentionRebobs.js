@@ -15,7 +15,7 @@ import rebobLogo from 'images/CAW-CAW.svg'
 
 import Container from 'components/Container'
 
-const Attention = () => {
+const AttentionRebobs = () => {
   const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -164,4 +164,4 @@ We have limited-availability team events that require registration on TeamSnap. 
   )
 }
 
-export default Attention
+export default AttentionRebobs

@@ -10,29 +10,31 @@ import Container from 'components/Container'
 import pitzone from 'images/team/login/pitzone-icon.png'
 import teamsnap from 'images/team/login/snap-icon.png'
 import strava from 'images/team/login/strava-icon.png'
+import nica from 'images/team/login/nica-icon.png'
 
 const mock = [
   {
+    title: 'RACE INFO',
+    subtitle: 'Get upcoming race flyers and race results.',
+    icon: nica,
+    href: 'https://www.norcalmtb.org/races/',
+  },
+  {
     title: 'PIT ZONE',
-    subtitle:
-      'Log-In to your PIT ZONE account right here. Keep your info up-to-date, register for races, and more.',
+    subtitle: 'Register for races & keep your info updated.',
     icon: pitzone,
     href: 'https://pitzone.nationalmtb.org/users/sign_in',
   },
   {
     title: 'TEAMSNAP',
-    subtitle:
-      'Log-In to your TeamSnap account right here. Stay in the loop with team emails, texts and more.',
+    subtitle: 'Stay updated with your team via email, text & more.',
     icon: teamsnap,
     href: 'https://go.teamsnap.com/6726246/home',
   },
-
   {
     title: 'STRAVA',
-    subtitle:
-      "We've added our club page on Strava to help track ride goals and have fun with metrics.",
+    subtitle: 'Track ride goals & have fun with metrics.',
     href: 'https://www.strava.com/',
-
     icon: strava,
   },
 ]
@@ -40,7 +42,7 @@ const mock = [
 const Login = () => {
   return (
     <Box bgcolor={'#f16021'}>
-      <Container>
+      <Container paddingY={'1rem !important'}>
         <Box>
           <Box marginBottom={4}>
             <Typography
@@ -59,10 +61,10 @@ const Login = () => {
               align={'center'}
               sx={{ color: 'common.white' }}
             >
-              Keep your info up-to-date, register for races, and more
+              Keep your info up-to-date, register for races, and more.
             </Typography>
           </Box>
-          <Grid container spacing={2}>
+          <Grid container spacing={2} flexWrap={{ sm: 'wrap', md: 'nowrap' }}>
             {mock.map((item, i) => (
               <Grid item xs={12} md={4} key={i}>
                 <Box
@@ -74,12 +76,12 @@ const Login = () => {
                 >
                   <Box
                     component={Avatar}
-                    width={{ xs: 60, md: 80 }}
-                    height={{ xs: 60, md: 80 }}
-                    marginBottom={2}
+                    width={{ xs: 50, md: 60 }}
+                    height={{ xs: 50, md: 60 }}
+                    marginY={2}
                     src={item.icon}
                     sx={{ filter: 'contrast(0) brightness(2)' }}
-                    variant="rounded"
+                    variant="square"
                   />
                   <Link href={item.href} target="_blank" underline="none">
                     <Typography
@@ -96,11 +98,7 @@ const Login = () => {
                       {item.title}
                     </Typography>
                   </Link>
-                  <Typography
-                    sx={{ color: 'common.white' }}
-                    align={'center'}
-                    
-                  >
+                  <Typography sx={{ color: 'common.white' }} align={'center'}>
                     {item.subtitle}
                   </Typography>
                 </Box>

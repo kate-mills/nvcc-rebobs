@@ -5,9 +5,7 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 
-import graniteBayCamping from 'images/team/granitebay/granite-bay-camping.jpeg'
 import graniteBayGirls from 'images/team/granitebay/granite-bay-girls.jpeg'
-import graniteBayStart from 'images/team/granitebay/granite-bay-start.jpeg'
 import graniteBayTeamSpirit from 'images/team/granitebay/granite-bay-team-spirit.jpeg'
 import graniteBayWinners from 'images/team/granitebay/granite-bay-winners.jpeg'
 
@@ -20,61 +18,72 @@ import practices2 from 'images/team/practice/02.jpeg'
 import practices3 from 'images/team/practice/03.jpeg'
 import practices4 from 'images/team/practice/04.jpeg'
 
+import img1 from 'images/team/instagram/img1.webp'
+import img2 from 'images/team/instagram/img2.webp'
+import img3 from 'images/team/instagram/img3.webp'
+import img4 from 'images/team/instagram/img4.webp'
+import img5 from 'images/team/instagram/img5.webp'
+import img6 from 'images/team/instagram/img6.webp'
+import img7 from 'images/team/instagram/img7.webp'
+import img8 from 'images/team/instagram/img8.webp'
+
 const mockLeftGrid = [
   {
-    image: graniteBayStart,
-    description: 'TEAMSNAP: Granite Bay 2023',
-    title: 'Granite Bay 2023',
+    image: img1,
+    description:
+      'Congratulations to Zac on taking 3rd place in the 18 and younger Sport class at the Lake Sonoma Crusher Series.',
   },
   {
-    image: graniteBayTeamSpirit,
-    description: 'TEAMSNAP:Granite Bay 2023',
-    title: 'Granite Bay 2023',
+    image: img2,
+    description:
+      'Cam, Audrey and “what?” Coach Mike 🏃 🏃‍♀️ 🏃‍♂️ in the Napa-Vintage-Justin Friendly Cross Country Meet!!! Go Coach Mike!!! ',
   },
   {
-    image: graniteBayGirls,
-    description: 'TEAMSNAP: Granite Bay 2023',
-    title: 'Granite Bay 2023',
+    image: img7,
+    description:
+      'Rebobs attack the Stafford Shorty. Good times had by all. Great to see old and new friends!',
   },
-
-  { image: practices3, description: 'TEAMSNAP: February 4, 2023', title: 'Practices 2023', },
+  { image: graniteBayTeamSpirit, description: '' },
+  { image: practices3, description: '' },
+  { image: graniteBayWinners, description: '' },
 ]
+
 const mockMiddleGrid = [
   {
-    image: petalumaDevo,
-    description: 'TEAMSNAP: Petaluma Devo 203',
-    title: 'Petaluma Devo 203',
+    image: img3,
+    description:
+      'The Halls & the Gibbs Climbed to the Top this weekend to support MS and Coach Trevor. Awesome job ladies!',
   },
   {
-    image: petalumaDevoHillside,
-    description: 'TEAMSNAP:Petaluma Devo 203',
-    title: 'Petaluma Devo 203',
+    image: img6,
+    description:
+      'Rebobs you did it, we did it!!! What an awesome day yesterday. We are so proud of each of you that made it out to race. For those of you who braved the conditions and challenged yourselves in your first race, Bravo!!! A shout out to Lumen on his 4th place win!!! And to Audrey, Alanah, and Stella on their podium finishes!!!',
   },
-  {
-    image: graniteBayWinners,
-    description: 'TEAMSNAP: Granite Bay 2023',
-    title: 'Granite Bay 2023',
-  },
-  {
-    image: practices4,
-    description: 'TEAMSNAP: February 4, 2023',
-    title: 'Practices 2023',
-  },
+  { image: petalumaDevo, description: '' },
+  { image: graniteBayGirls, description: '' },
+  { image: petalumaDevoHillside, description: '' },
+  { image: practices4, description: '' },
 ]
+
 const mockRightGrid = [
   {
-    image: practices1,
-    description: 'TEAMSNAP: February 4, 2023',
-    title: 'Practices 2023',
+    image: img8,
+    description:
+      'Col du Tourmalet- La Mongie- Luz Ardiden An epic day in the Pyrenees for Coach Dave and Audrey. They started the ride at sun rise which was such a magical time of day. Sound on for the last slide if you want to hear the Pyrenees ring. 9,357 feet of elevation.',
   },
-  { image: practices0, description: 'TEAMSNAP: January 14, 2023', title: 'Practices 2023', },
   {
-    image: practices2,
-    description: 'TEAMSNAP: February 4, 2023',
-    title: 'Practices 2023',
+    image: img4,
+    description:
+      'Happy 4th of July! 🇺🇸 Some of our Rebob ladies started the morning off with a 3K or 10k at the Kenwood Footrace!',
   },
-
-  { image: graniteBayCamping, description: 'TEAMSNAP: Granite Bay 2023', title: 'Granite Bay 2023', },
+  {
+    image: img5,
+    description:
+      'Congratulations to Zac Dropping for winning the Stafford Shorty Series Overall',
+  },
+  { image: practices1, description: '' },
+  { image: practices0, description: '' },
+  { image: practices2, description: '' },
 ]
 
 const Column = ({ data }) => {
@@ -107,7 +116,7 @@ const Column = ({ data }) => {
           >
             <Box
               component={'img'}
-              loading={i < 4 ? 'eager': 'lazy'}
+              loading={i < 4 ? 'eager' : 'lazy'}
               height={1}
               width={1}
               src={item.image}
@@ -153,10 +162,7 @@ const Column = ({ data }) => {
                   d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"
                 ></path>
               </Box>
-              <Typography variant={'h6'} fontWeight={700} gutterBottom>
-                {item.title}
-              </Typography>
-              <Typography>{item.description}</Typography>
+              {item.description && <Typography>{item.description}</Typography>}
             </Box>
           </Box>
         </Box>

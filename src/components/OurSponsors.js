@@ -14,6 +14,8 @@ import redwood from 'images/sponsors/redwood.webp'
 import skylinePark from 'images/sponsors/skyline-park.webp'
 import theHub from 'images/sponsors/the-hub.webp'
 import valero from 'images/sponsors/valero.webp'
+import billDodd from 'images/sponsors/billdodd.webp'
+
 
 const mock = [
   {
@@ -65,6 +67,13 @@ const mock = [
     height: 52,
     href: 'https://trailsalliance.org/',
   },
+  {
+    src: billDodd,
+    title: 'Bill Dodd',
+    width: 128,
+    height: 64,
+    href: 'https://sd03.senate.ca.gov/'
+  },
 ]
 
 const OurSponsors = () => {
@@ -93,7 +102,7 @@ const OurSponsors = () => {
               {mock.map((item, i) => (
                 <Box
                   marginTop={2}
-                  marginRight={4}
+                  marginRight={2}
                   key={i}
                 >
                   <Box component={'a'} href={item.href} target="_blank">

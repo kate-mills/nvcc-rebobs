@@ -15,7 +15,7 @@ import skylinePark from 'images/sponsors/skyline-park.webp'
 import theHub from 'images/sponsors/the-hub.webp'
 import valero from 'images/sponsors/valero.webp'
 import billDodd from 'images/sponsors/billdodd.webp'
-
+import ryanGregory from 'images/sponsors/ryan-gregory.webp'
 
 const mock = [
   {
@@ -72,7 +72,14 @@ const mock = [
     title: 'Bill Dodd',
     width: 128,
     height: 64,
-    href: 'https://sd03.senate.ca.gov/'
+    href: 'https://sd03.senate.ca.gov/',
+  },
+  {
+    src: ryanGregory,
+    title: 'Ryan Gregory',
+    width: 128,
+    height: 64,
+    href: 'https://nvta.ca.gov/biography-of-ryan-gregory-napas-2nd-district-supervisor/',
   },
 ]
 
@@ -87,7 +94,8 @@ const OurSponsors = () => {
               Proudly Sponsored By
             </Typography>
             <Typography variant={'h6'} component={'p'} color={'text.secondary'}>
-              Our team is incredibly thankful for the support of our community sponsors.
+              Our team is incredibly thankful for the support of our community
+              sponsors.
             </Typography>
           </Box>
         </Grid>
@@ -100,11 +108,7 @@ const OurSponsors = () => {
               alignItems={'center'}
             >
               {mock.map((item, i) => (
-                <Box
-                  marginTop={2}
-                  marginRight={2}
-                  key={i}
-                >
+                <Box marginTop={2} marginRight={2} key={i}>
                   <Box component={'a'} href={item.href} target="_blank">
                     <Box
                       component="img"

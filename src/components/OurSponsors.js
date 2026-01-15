@@ -16,6 +16,7 @@ import theHub from 'images/sponsors/the-hub.webp'
 import valero from 'images/sponsors/valero.webp'
 import billDodd from 'images/sponsors/billdodd.webp'
 import ryanGregory from 'images/sponsors/ryan-gregory.webp'
+import johnDaw from 'images/sponsors/john-daw-dds.webp'
 
 const mock = [
   {
@@ -81,6 +82,15 @@ const mock = [
     height: 64,
     href: 'https://nvta.ca.gov/biography-of-ryan-gregory-napas-2nd-district-supervisor/',
   },
+  {
+
+    src: johnDaw,
+    title: 'John W. Daw, DDS',
+    width: 139,
+    height: 60,
+    href: 'https://www.johndawdds.com/',
+  }
+
 ]
 
 const OurSponsors = () => {
